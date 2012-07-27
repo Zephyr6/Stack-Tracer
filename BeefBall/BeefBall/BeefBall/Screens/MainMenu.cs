@@ -83,6 +83,25 @@ namespace BeefBall.Screens
                 if (mGamePad.LeftStick.Position.Y != 0)
                     isMousedOver = false;
             }
+
+            if (mGamePad.ButtonPushed(Xbox360GamePad.Button.A) || mGamePad.ButtonPushed(Xbox360GamePad.Button.Start))
+            {
+                if (currentButton == MainMenuButtons.Start)
+                {
+                    this.MoveToScreen(typeof(GameScreen).FullName);
+                    Game1.StartGameSFX.Play();
+                }
+                else if (currentButton == MainMenuButtons.About)
+                {
+                    this.MoveToScreen(typeof(About).FullName);
+                    Game1.AboutGameSFX.Play();
+                }
+                else if (currentButton == MainMenuButtons.Exit)
+                {
+                    FlatRedBallServices.Game.Exit();
+                }
+
+            }
 		}
 
         void SelectActivity()

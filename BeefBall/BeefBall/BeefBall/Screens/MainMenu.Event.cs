@@ -24,6 +24,7 @@ namespace BeefBall.Screens
         {
             FlatRedBallServices.Game.Exit();
         }
+
         void OnStartButtonRollOn (FlatRedBall.Gui.IWindow callingWindow)
         {
             AboutButton.CurrentState = Button.VariableState.Disabled;

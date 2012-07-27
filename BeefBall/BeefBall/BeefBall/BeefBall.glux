@@ -272,7 +272,7 @@
           <CustomProperty>
             <Type>float</Type>
             <Member>X</Member>
-            <ValueAsFloat>900</ValueAsFloat>
+            <ValueAsFloat>870</ValueAsFloat>
           </CustomProperty>
           <CustomProperty>
             <Type>float</Type>

@@ -451,11 +451,11 @@ namespace BeefBall.Screens
 			}
 			if (CapacitorPlatformInstance5.Parent == null)
 			{
-				CapacitorPlatformInstance5.X = 900f;
+				CapacitorPlatformInstance5.X = 870f;
 			}
 			else
 			{
-				CapacitorPlatformInstance5.RelativeX = 900f;
+				CapacitorPlatformInstance5.RelativeX = 870f;
 			}
 			if (CapacitorPlatformInstance5.Parent == null)
 			{
@@ -713,11 +713,11 @@ namespace BeefBall.Screens
 			CapacitorPlatformInstance5.AddToManagers(mLayer);
 			if (CapacitorPlatformInstance5.Parent == null)
 			{
-				CapacitorPlatformInstance5.X = 900f;
+				CapacitorPlatformInstance5.X = 870f;
 			}
 			else
 			{
-				CapacitorPlatformInstance5.RelativeX = 900f;
+				CapacitorPlatformInstance5.RelativeX = 870f;
 			}
 			if (CapacitorPlatformInstance5.Parent == null)
 			{

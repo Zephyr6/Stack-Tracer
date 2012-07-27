@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SpriteEditorScene xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Sprite>
+    <ScaleX>16</ScaleX>
+    <ScaleY>16</ScaleY>
+    <Name>testsprite32x321</Name>
+    <Animate>true</Animate>
+    <CurrentChain>0</CurrentChain>
+    <AnimationChainsFile>animationchainlistfile.achx</AnimationChainsFile>
+    <ConstantPixelSize>0.5</ConstantPixelSize>
+    <TopTextureCoordinate>0.25</TopTextureCoordinate>
+    <BottomTextureCoordinate>0.5</BottomTextureCoordinate>
+    <LeftTextureCoordinate>0.25</LeftTextureCoordinate>
+    <RightTextureCoordinate>0.5</RightTextureCoordinate>
+  </Sprite>
+  <Camera>
+    <X>0</X>
+    <Y>0</Y>
+    <Z>-40</Z>
+    <Orthogonal>false</Orthogonal>
+    <OrthogonalHeight>600</OrthogonalHeight>
+    <OrthogonalWidth>-1</OrthogonalWidth>
+    <NearClipPlane>1</NearClipPlane>
+    <FarClipPlane>1000</FarClipPlane>
+  </Camera>
+  <PixelSize>0</PixelSize>
+  <AssetsRelativeToSceneFile>true</AssetsRelativeToSceneFile>
+  <CoordinateSystem>LeftHanded</CoordinateSystem>
+</SpriteEditorScene>

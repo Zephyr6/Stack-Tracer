@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" width="30" height="10" tilewidth="16" tileheight="16">
+ <tileset firstgid="1" name="colorTiles16x16" tilewidth="16" tileheight="16">
+  <image source="../FRBtest/FRBtest/FRBtestContent/colorTiles16x16.png" trans="0088ff" width="1024" height="16"/>
+ </tileset>
+ <layer name="Tile Layer 1" width="30" height="10">
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo2AUUBMwATEzjTALHntZgZgNiNnRaBDmwMGGqWNH46OzOQnYy47DXDYsmAOLGg4schxY7AUA7RgBhA==
+  </data>
+ </layer>
+ <objectgroup name="Floor" width="30" height="10">
+  <object x="53" y="112">
+   <polygon points="0,0 -5,8 -5,48 378,48 378,8 374,1"/>
+  </object>
+ </objectgroup>
+</map>

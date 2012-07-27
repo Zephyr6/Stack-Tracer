@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<AnimationEditorPropertiesSave xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <BackgroundColorAsHtml>#FFFFFF</BackgroundColorAsHtml>
+  <Camera>
+    <X>-0.1608738</X>
+    <Y>-0.6368695</Y>
+    <Z>-9.913511</Z>
+    <Orthogonal>false</Orthogonal>
+    <OrthogonalHeight>15</OrthogonalHeight>
+    <OrthogonalWidth>-1</OrthogonalWidth>
+    <NearClipPlane>1</NearClipPlane>
+    <FarClipPlane>7000</FarClipPlane>
+  </Camera>
+  <MainSpritePixelSize>0.03125</MainSpritePixelSize>
+  <Filtering>false</Filtering>
+  <LineGrid>
+    <NumberOfHorizontalLines>11</NumberOfHorizontalLines>
+    <NumberOfVerticalLines>11</NumberOfVerticalLines>
+    <X>0</X>
+    <Y>0</Y>
+    <DistanceBetweenLines>1</DistanceBetweenLines>
+    <Visible>true</Visible>
+  </LineGrid>
+  <FilesToMakeDotDotSlashRelative />
+</AnimationEditorPropertiesSave>

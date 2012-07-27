@@ -54,7 +54,7 @@ namespace BeefBall.Entities.GameScreen
         {
             facing = RIGHT;
             CurrentState = VariableState.R_Idle;
-
+            
             this.PlayerIndex = 0;
             Acceleration.Y = -400F;
 

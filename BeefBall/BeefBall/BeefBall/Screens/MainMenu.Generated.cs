@@ -59,6 +59,7 @@ namespace BeefBall.Screens
 		public MainMenu()
 			: base("MainMenu")
 		{
+            
 		}
 
         public override void Initialize(bool addToManagers)

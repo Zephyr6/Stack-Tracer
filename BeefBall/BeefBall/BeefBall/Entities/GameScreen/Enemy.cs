@@ -13,6 +13,7 @@ using FlatRedBall.Math.Splines;
 using BitmapFont = FlatRedBall.Graphics.BitmapFont;
 using Cursor = FlatRedBall.Gui.Cursor;
 using GuiManager = FlatRedBall.Gui.GuiManager;
+using Microsoft.Xna.Framework;
 
 #if FRB_XNA || SILVERLIGHT
 using Keys = Microsoft.Xna.Framework.Input.Keys;
@@ -48,7 +49,7 @@ namespace BeefBall.Entities.GameScreen
             mHealthBar.Y = Y + 20;
             mHealthBar.AttachTo(this, true);
             mHealthBar.Visible = false;
-            Acceleration.Y = -40F;
+            Acceleration.Y = -100F;
 		}
 
 		private void CustomActivity()
@@ -66,7 +67,7 @@ namespace BeefBall.Entities.GameScreen
                         timeHit = 0;
                     }
                     else
-                        Destroy();
+                        this.Destroy();
                 }
             }
 
@@ -125,6 +126,9 @@ namespace BeefBall.Entities.GameScreen
         public void Kill()
         {
             delay = 1.5;
+            Velocity.X += 30;
+            Velocity.Y += 50;
+            Body.LastMoveCollisionReposition = Vector2.Zero;
             CurrentState = VariableState.L_Die;
         }
 
@@ -132,6 +136,9 @@ namespace BeefBall.Entities.GameScreen
 		{
             mHealthBar.Destroy();
             isDead = true;
+            foreach (Text t in damageTexts)
+                TextManager.RemoveText(t);
+            damageTexts.Clear();
 		}
 
         private static void CustomLoadStaticContent(string contentManagerName)

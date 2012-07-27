@@ -7,8 +7,17 @@
       <Importer>WavImporter</Importer>
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\FlatRedBallProjects\BeefBall\BeefBall\BeefBall\bin\x86\Debug\Content\Entities\Player\hit.xnb</Output>
+      <Output>C:\Users\Carlos\Documents\GitHub\Stack-Tracer\BeefBall\BeefBall\BeefBall\bin\x86\Debug\Content\Entities\Player\hit.xnb</Output>
       <Time>2012-07-21T13:13:46.3176043-06:00</Time>
+    </Item>
+    <Item>
+      <Source>Entities\Player\jump.wav</Source>
+      <Name>Entities\Player\jump</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Carlos\Documents\GitHub\Stack-Tracer\BeefBall\BeefBall\BeefBall\bin\x86\Debug\Content\Entities\Player\jump.xnb</Output>
+      <Time>2012-07-22T21:24:00.3994977-06:00</Time>
     </Item>
     <Item>
       <Source>Entities\Player\swing.wav</Source>
@@ -16,7 +25,7 @@
       <Importer>WavImporter</Importer>
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\FlatRedBallProjects\BeefBall\BeefBall\BeefBall\bin\x86\Debug\Content\Entities\Player\swing.xnb</Output>
+      <Output>C:\Users\Carlos\Documents\GitHub\Stack-Tracer\BeefBall\BeefBall\BeefBall\bin\x86\Debug\Content\Entities\Player\swing.xnb</Output>
       <Time>2012-07-22T16:46:13.4506074-06:00</Time>
     </Item>
     <Item>
@@ -25,17 +34,8 @@
       <Importer>WavImporter</Importer>
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\FlatRedBallProjects\BeefBall\BeefBall\BeefBall\bin\x86\Debug\Content\Entities\Player\swing2.xnb</Output>
+      <Output>C:\Users\Carlos\Documents\GitHub\Stack-Tracer\BeefBall\BeefBall\BeefBall\bin\x86\Debug\Content\Entities\Player\swing2.xnb</Output>
       <Time>2012-07-22T17:11:48.2573933-06:00</Time>
-    </Item>
-    <Item>
-      <Source>Entities\Player\jump.wav</Source>
-      <Name>Entities\Player\jump</Name>
-      <Importer>WavImporter</Importer>
-      <Processor>SoundEffectProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\FlatRedBallProjects\BeefBall\BeefBall\BeefBall\bin\x86\Debug\Content\Entities\Player\jump.xnb</Output>
-      <Time>2012-07-22T21:24:00.3994977-06:00</Time>
     </Item>
     <Item>
       <Source>AboutSound.mp3</Source>
@@ -43,7 +43,7 @@
       <Importer>Mp3Importer</Importer>
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\FlatRedBallProjects\BeefBall\BeefBall\BeefBall\bin\x86\Debug\Content\AboutSound.xnb</Output>
+      <Output>C:\Users\Carlos\Documents\GitHub\Stack-Tracer\BeefBall\BeefBall\BeefBall\bin\x86\Debug\Content\AboutSound.xnb</Output>
       <Time>2012-07-22T23:51:23.5262956-06:00</Time>
     </Item>
     <Item>
@@ -52,7 +52,7 @@
       <Importer>Mp3Importer</Importer>
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\FlatRedBallProjects\BeefBall\BeefBall\BeefBall\bin\x86\Debug\Content\ExitSound.xnb</Output>
+      <Output>C:\Users\Carlos\Documents\GitHub\Stack-Tracer\BeefBall\BeefBall\BeefBall\bin\x86\Debug\Content\ExitSound.xnb</Output>
       <Time>2012-07-22T23:51:27.4015173-06:00</Time>
     </Item>
     <Item>
@@ -61,7 +61,7 @@
       <Importer>Mp3Importer</Importer>
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\FlatRedBallProjects\BeefBall\BeefBall\BeefBall\bin\x86\Debug\Content\StartSound.xnb</Output>
+      <Output>C:\Users\Carlos\Documents\GitHub\Stack-Tracer\BeefBall\BeefBall\BeefBall\bin\x86\Debug\Content\StartSound.xnb</Output>
       <Time>2012-07-22T23:51:28.8115979-06:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
@@ -70,10 +70,10 @@
       <TargetProfile>Reach</TargetProfile>
       <BuildConfiguration>Debug</BuildConfiguration>
       <CompressContent>false</CompressContent>
-      <RootDirectory>C:\FlatRedBallProjects\BeefBall\BeefBall\BeefBallContent\</RootDirectory>
-      <LoggerRootDirectory>C:\FlatRedBallProjects\BeefBall\BeefBall\BeefBall\</LoggerRootDirectory>
-      <IntermediateDirectory>C:\FlatRedBallProjects\BeefBall\BeefBall\BeefBallContent\obj\x86\Debug\</IntermediateDirectory>
-      <OutputDirectory>C:\FlatRedBallProjects\BeefBall\BeefBall\BeefBall\bin\x86\Debug\Content\</OutputDirectory>
+      <RootDirectory>C:\Users\Carlos\Documents\GitHub\Stack-Tracer\BeefBall\BeefBall\BeefBallContent\</RootDirectory>
+      <LoggerRootDirectory>C:\Users\Carlos\Documents\GitHub\Stack-Tracer\BeefBall\BeefBall\BeefBall\</LoggerRootDirectory>
+      <IntermediateDirectory>C:\Users\Carlos\Documents\GitHub\Stack-Tracer\BeefBall\BeefBall\BeefBallContent\obj\x86\Debug\</IntermediateDirectory>
+      <OutputDirectory>C:\Users\Carlos\Documents\GitHub\Stack-Tracer\BeefBall\BeefBall\BeefBall\bin\x86\Debug\Content\</OutputDirectory>
     </Settings>
     <Assemblies>
       <Assembly>
@@ -101,11 +101,11 @@
         <Value>2010-08-23T13:41:18-06:00</Value>
       </Assembly>
       <Assembly>
-        <Key>C:\FlatRedBallProjects\BeefBall\BeefBall\BeefBall\Libraries\Xna4Pc\FlatRedBall.dll</Key>
+        <Key>C:\Users\Carlos\Documents\GitHub\Stack-Tracer\BeefBall\BeefBall\BeefBall\Libraries\Xna4Pc\FlatRedBall.dll</Key>
         <Value>2012-07-17T20:27:24-06:00</Value>
       </Assembly>
       <Assembly>
-        <Key>C:\FlatRedBallProjects\BeefBall\BeefBall\BeefBall\Libraries\Xna4Pc\FlatRedBall.Content.dll</Key>
+        <Key>C:\Users\Carlos\Documents\GitHub\Stack-Tracer\BeefBall\BeefBall\BeefBall\Libraries\Xna4Pc\FlatRedBall.Content.dll</Key>
         <Value>2012-07-17T20:26:02-06:00</Value>
       </Assembly>
       <Assembly>

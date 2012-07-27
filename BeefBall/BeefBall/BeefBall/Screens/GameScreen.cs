@@ -62,8 +62,6 @@ namespace BeefBall.Screens
             CollisionActivity();
 
             CleanUpActivity();
-
-            Console.WriteLine("GS: {0} Player: {1}", enemies.Count, PlayerInstance.enemies.Count);
 		}
 
         private void CleanUpActivity()

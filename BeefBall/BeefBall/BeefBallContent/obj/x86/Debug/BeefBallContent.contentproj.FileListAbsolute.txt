@@ -1,1 +1,2 @@
 C:\FlatRedBallProjects\BeefBall\BeefBall\BeefBallContent\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Carlos\Documents\GitHub\Stack-Tracer\BeefBall\BeefBall\BeefBallContent\obj\x86\Debug\ResolveAssemblyReference.cache

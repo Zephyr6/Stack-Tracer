@@ -1,7 +1,7 @@
 Content\Entities\Player\hit.xnb
+Content\Entities\Player\jump.xnb
 Content\Entities\Player\swing.xnb
 Content\Entities\Player\swing2.xnb
-Content\Entities\Player\jump.xnb
 Content\AboutSound.xnb
 Content\ExitSound.xnb
 Content\StartSound.xnb
@@ -31,4 +31,5 @@ Content\Resistor256.png
 Content\Screens\MainMenu\MyBackground.scnx
 Content\Screens\MainMenu\redball.bmp
 Content\testsprite32x32.png
+qa.csv.csv
 redball.BMP

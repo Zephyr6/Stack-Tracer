@@ -138,6 +138,7 @@
     <Compile Include="Entities\HealthBar.Generated.cs">
       <DependentUpon>HealthBar.cs</DependentUpon>
     </Compile>
+    <Compile Include="Entities\Question.cs" />
     <Compile Include="Entities\ResistorStamp.cs" />
     <Compile Include="Entities\ResistorStamp.Generated.cs">
       <DependentUpon>ResistorStamp.cs</DependentUpon>
@@ -170,6 +171,10 @@
     <Compile Include="Screens\MainMenu.Generated.Event.cs">
       <DependentUpon>MainMenu.cs</DependentUpon>
     </Compile>
+    <Compile Include="Screens\QuizScreen.cs" />
+    <Compile Include="Screens\QuizScreen.Generated.cs">
+      <DependentUpon>QuizScreen.cs</DependentUpon>
+    </Compile>
     <Compile Include="Screens\Screen.cs" />
     <Compile Include="Screens\ScreenManager.cs" />
     <Compile Include="Setup\CameraSetup.cs" />
@@ -178,6 +183,9 @@
     <Content Include="Game.ico" />
     <Content Include="GameThumbnail.png" />
     <Content Include="Libraries\Xna4Pc\FlatRedBall.Content.dll" />
+    <None Include="qa.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Include="redball.BMP">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>

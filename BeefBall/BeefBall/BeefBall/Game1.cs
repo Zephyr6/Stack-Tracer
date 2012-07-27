@@ -54,7 +54,7 @@ namespace BeefBall
                 FlatRedBall.Input.InputManager.Xbox360GamePads[0].CreateDefaultButtonMap();
             }
 
-			Screens.ScreenManager.Start(typeof(BeefBall.Screens.GameScreen).FullName);
+			Screens.ScreenManager.Start(typeof(BeefBall.Screens.QuizScreen).FullName);
 
             base.Initialize();
 

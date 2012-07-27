@@ -7,26 +7,8 @@
       <Importer>WavImporter</Importer>
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\FlatRedBallProjects\BeefBall\BeefBall\BeefBall\bin\x86\Debug\Content\Entities\Player\hit.xnb</Output>
-      <Time>2012-07-21T13:13:46.3176043-06:00</Time>
-    </Item>
-    <Item>
-      <Source>Entities\Player\swing.wav</Source>
-      <Name>Entities\Player\swing</Name>
-      <Importer>WavImporter</Importer>
-      <Processor>SoundEffectProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\FlatRedBallProjects\BeefBall\BeefBall\BeefBall\bin\x86\Debug\Content\Entities\Player\swing.xnb</Output>
-      <Time>2012-07-22T16:46:13.4506074-06:00</Time>
-    </Item>
-    <Item>
-      <Source>Entities\Player\swing2.wav</Source>
-      <Name>Entities\Player\swing2</Name>
-      <Importer>WavImporter</Importer>
-      <Processor>SoundEffectProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\FlatRedBallProjects\BeefBall\BeefBall\BeefBall\bin\x86\Debug\Content\Entities\Player\swing2.xnb</Output>
-      <Time>2012-07-22T17:11:48.2573933-06:00</Time>
+      <Output>C:\Users\Dave\Documents\GitHub\Stack-Tracer\BeefBall\BeefBall\BeefBall\bin\x86\Debug\Content\Entities\Player\hit.xnb</Output>
+      <Time>2012-07-26T23:04:03.1454322-06:00</Time>
     </Item>
     <Item>
       <Source>Entities\Player\jump.wav</Source>
@@ -34,8 +16,26 @@
       <Importer>WavImporter</Importer>
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\FlatRedBallProjects\BeefBall\BeefBall\BeefBall\bin\x86\Debug\Content\Entities\Player\jump.xnb</Output>
-      <Time>2012-07-22T21:24:00.3994977-06:00</Time>
+      <Output>C:\Users\Dave\Documents\GitHub\Stack-Tracer\BeefBall\BeefBall\BeefBall\bin\x86\Debug\Content\Entities\Player\jump.xnb</Output>
+      <Time>2012-07-26T23:04:03.1464323-06:00</Time>
+    </Item>
+    <Item>
+      <Source>Entities\Player\swing.wav</Source>
+      <Name>Entities\Player\swing</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Dave\Documents\GitHub\Stack-Tracer\BeefBall\BeefBall\BeefBall\bin\x86\Debug\Content\Entities\Player\swing.xnb</Output>
+      <Time>2012-07-26T23:04:03.1474323-06:00</Time>
+    </Item>
+    <Item>
+      <Source>Entities\Player\swing2.wav</Source>
+      <Name>Entities\Player\swing2</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Dave\Documents\GitHub\Stack-Tracer\BeefBall\BeefBall\BeefBall\bin\x86\Debug\Content\Entities\Player\swing2.xnb</Output>
+      <Time>2012-07-26T23:04:03.1484324-06:00</Time>
     </Item>
     <Item>
       <Source>AboutSound.mp3</Source>
@@ -43,8 +43,8 @@
       <Importer>Mp3Importer</Importer>
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\FlatRedBallProjects\BeefBall\BeefBall\BeefBall\bin\x86\Debug\Content\AboutSound.xnb</Output>
-      <Time>2012-07-22T23:51:23.5262956-06:00</Time>
+      <Output>C:\Users\Dave\Documents\GitHub\Stack-Tracer\BeefBall\BeefBall\BeefBall\bin\x86\Debug\Content\AboutSound.xnb</Output>
+      <Time>2012-07-26T23:04:03.0574272-06:00</Time>
     </Item>
     <Item>
       <Source>ExitSound.mp3</Source>
@@ -52,8 +52,8 @@
       <Importer>Mp3Importer</Importer>
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\FlatRedBallProjects\BeefBall\BeefBall\BeefBall\bin\x86\Debug\Content\ExitSound.xnb</Output>
-      <Time>2012-07-22T23:51:27.4015173-06:00</Time>
+      <Output>C:\Users\Dave\Documents\GitHub\Stack-Tracer\BeefBall\BeefBall\BeefBall\bin\x86\Debug\Content\ExitSound.xnb</Output>
+      <Time>2012-07-26T23:04:03.1614331-06:00</Time>
     </Item>
     <Item>
       <Source>StartSound.mp3</Source>
@@ -61,8 +61,8 @@
       <Importer>Mp3Importer</Importer>
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\FlatRedBallProjects\BeefBall\BeefBall\BeefBall\bin\x86\Debug\Content\StartSound.xnb</Output>
-      <Time>2012-07-22T23:51:28.8115979-06:00</Time>
+      <Output>C:\Users\Dave\Documents\GitHub\Stack-Tracer\BeefBall\BeefBall\BeefBall\bin\x86\Debug\Content\StartSound.xnb</Output>
+      <Time>2012-07-26T23:04:03.1694336-06:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
@@ -70,47 +70,47 @@
       <TargetProfile>Reach</TargetProfile>
       <BuildConfiguration>Debug</BuildConfiguration>
       <CompressContent>false</CompressContent>
-      <RootDirectory>C:\FlatRedBallProjects\BeefBall\BeefBall\BeefBallContent\</RootDirectory>
-      <LoggerRootDirectory>C:\FlatRedBallProjects\BeefBall\BeefBall\BeefBall\</LoggerRootDirectory>
-      <IntermediateDirectory>C:\FlatRedBallProjects\BeefBall\BeefBall\BeefBallContent\obj\x86\Debug\</IntermediateDirectory>
-      <OutputDirectory>C:\FlatRedBallProjects\BeefBall\BeefBall\BeefBall\bin\x86\Debug\Content\</OutputDirectory>
+      <RootDirectory>C:\Users\Dave\Documents\GitHub\Stack-Tracer\BeefBall\BeefBall\BeefBallContent\</RootDirectory>
+      <LoggerRootDirectory>C:\Users\Dave\Documents\GitHub\Stack-Tracer\BeefBall\BeefBall\BeefBall\</LoggerRootDirectory>
+      <IntermediateDirectory>C:\Users\Dave\Documents\GitHub\Stack-Tracer\BeefBall\BeefBall\BeefBallContent\obj\x86\Debug\</IntermediateDirectory>
+      <OutputDirectory>C:\Users\Dave\Documents\GitHub\Stack-Tracer\BeefBall\BeefBall\BeefBall\bin\x86\Debug\Content\</OutputDirectory>
     </Settings>
     <Assemblies>
       <Assembly>
         <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.XImporter.dll</Key>
-        <Value>2010-08-23T13:41:18-06:00</Value>
+        <Value>2010-08-23T12:41:18-06:00</Value>
       </Assembly>
       <Assembly>
         <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.VideoImporters.dll</Key>
-        <Value>2010-08-23T13:41:18-06:00</Value>
+        <Value>2010-08-23T12:41:18-06:00</Value>
       </Assembly>
       <Assembly>
         <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.TextureImporter.dll</Key>
-        <Value>2010-08-23T13:41:18-06:00</Value>
+        <Value>2010-08-23T12:41:18-06:00</Value>
       </Assembly>
       <Assembly>
         <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.FBXImporter.dll</Key>
-        <Value>2010-08-23T13:41:18-06:00</Value>
+        <Value>2010-08-23T12:41:18-06:00</Value>
       </Assembly>
       <Assembly>
         <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.EffectImporter.dll</Key>
-        <Value>2010-08-23T13:41:18-06:00</Value>
+        <Value>2010-08-23T12:41:18-06:00</Value>
       </Assembly>
       <Assembly>
         <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.AudioImporters.dll</Key>
-        <Value>2010-08-23T13:41:18-06:00</Value>
+        <Value>2010-08-23T12:41:18-06:00</Value>
       </Assembly>
       <Assembly>
-        <Key>C:\FlatRedBallProjects\BeefBall\BeefBall\BeefBall\Libraries\Xna4Pc\FlatRedBall.dll</Key>
-        <Value>2012-07-17T20:27:24-06:00</Value>
+        <Key>C:\Users\Dave\Documents\GitHub\Stack-Tracer\BeefBall\BeefBall\BeefBall\Libraries\Xna4Pc\FlatRedBall.dll</Key>
+        <Value>2012-07-26T23:04:02.8194136-06:00</Value>
       </Assembly>
       <Assembly>
-        <Key>C:\FlatRedBallProjects\BeefBall\BeefBall\BeefBall\Libraries\Xna4Pc\FlatRedBall.Content.dll</Key>
-        <Value>2012-07-17T20:26:02-06:00</Value>
+        <Key>C:\Users\Dave\Documents\GitHub\Stack-Tracer\BeefBall\BeefBall\BeefBall\Libraries\Xna4Pc\FlatRedBall.Content.dll</Key>
+        <Value>2012-07-26T23:04:02.7854116-06:00</Value>
       </Assembly>
       <Assembly>
         <Key>C:\Windows\Microsoft.Net\assembly\GAC_32\Microsoft.Xna.Framework.Content.Pipeline\v4.0_4.0.0.0__842cf8be1de50553\Microsoft.Xna.Framework.Content.Pipeline.dll</Key>
-        <Value>2012-02-15T01:27:13.1005018-07:00</Value>
+        <Value>2012-07-16T16:08:30.8777262-06:00</Value>
       </Assembly>
     </Assemblies>
   </Asset>

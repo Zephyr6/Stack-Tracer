@@ -33,8 +33,11 @@ namespace BeefBall.Screens
         private List<Question> questions = new List<Question>();
         private Question[] threeQuestions = new Question[3];
         //Text questionText;
+        Text questionText = TextManager.AddText("");
         void CustomInitialize()
         {
+            FlatRedBallServices.IsWindowsCursorVisible = true;
+            NextQuestion.Visible = false;
             ReadInCSV();
             Select3RandomQuestions();
             DisplayQuestions();
@@ -120,13 +123,11 @@ namespace BeefBall.Screens
             {
                 Console.WriteLine(q);
             }
-
-            Text questionText = TextManager.AddText(threeQuestions[0].ToString());
+            TextManager.RemoveText(questionText);
+            questionText = TextManager.AddText(threeQuestions[questionIndex].ToString());
             questionText.Scale = 4.5f;
             questionText.X = -50;
             questionText.Y = 20;
-
-
 
         }
 

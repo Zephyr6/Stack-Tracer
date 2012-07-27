@@ -41,10 +41,24 @@ namespace BeefBall.Screens
 		static bool HasBeenLoadedWithGlobalContentManager = false;
 		#endif
 		
-		private BeefBall.Entities.Button ButtonInstance;
-		private BeefBall.Entities.Button ButtonInstance2;
-		private BeefBall.Entities.Button ButtonInstance3;
-		private BeefBall.Entities.Button ButtonInstance4;
+		private BeefBall.Entities.Button AButton;
+		private BeefBall.Entities.Button BButton;
+		private BeefBall.Entities.Button CButton;
+		private BeefBall.Entities.Button DButton;
+		private BeefBall.Entities.Button NextQuestion;
+		public event FlatRedBall.Gui.WindowEvent AButtonRollOn;
+		public event FlatRedBall.Gui.WindowEvent AButtonRollOff;
+		public event FlatRedBall.Gui.WindowEvent AButtonClick;
+		public event FlatRedBall.Gui.WindowEvent BButtonRollOn;
+		public event FlatRedBall.Gui.WindowEvent BButtonRollOff;
+		public event FlatRedBall.Gui.WindowEvent BButtonClick;
+		public event FlatRedBall.Gui.WindowEvent CButtonRollOn;
+		public event FlatRedBall.Gui.WindowEvent CButtonRollOff;
+		public event FlatRedBall.Gui.WindowEvent CButtonClick;
+		public event FlatRedBall.Gui.WindowEvent DButtonRollOn;
+		public event FlatRedBall.Gui.WindowEvent DButtonRollOff;
+		public event FlatRedBall.Gui.WindowEvent DButtonClick;
+		public event FlatRedBall.Gui.WindowEvent NextQuestionClick;
 
 		public QuizScreen()
 			: base("QuizScreen")
@@ -55,14 +69,42 @@ namespace BeefBall.Screens
         {
 			// Generated Initialize
 			LoadStaticContent(ContentManagerName);
-			ButtonInstance = new BeefBall.Entities.Button(ContentManagerName, false);
-			ButtonInstance.Name = "ButtonInstance";
-			ButtonInstance2 = new BeefBall.Entities.Button(ContentManagerName, false);
-			ButtonInstance2.Name = "ButtonInstance2";
-			ButtonInstance3 = new BeefBall.Entities.Button(ContentManagerName, false);
-			ButtonInstance3.Name = "ButtonInstance3";
-			ButtonInstance4 = new BeefBall.Entities.Button(ContentManagerName, false);
-			ButtonInstance4.Name = "ButtonInstance4";
+			AButton = new BeefBall.Entities.Button(ContentManagerName, false);
+			AButton.Name = "AButton";
+			BButton = new BeefBall.Entities.Button(ContentManagerName, false);
+			BButton.Name = "BButton";
+			CButton = new BeefBall.Entities.Button(ContentManagerName, false);
+			CButton.Name = "CButton";
+			DButton = new BeefBall.Entities.Button(ContentManagerName, false);
+			DButton.Name = "DButton";
+			NextQuestion = new BeefBall.Entities.Button(ContentManagerName, false);
+			NextQuestion.Name = "NextQuestion";
+			AButton.RollOn += OnAButtonRollOn;
+			AButton.RollOn += OnAButtonRollOnTunnel;
+			AButton.RollOff += OnAButtonRollOff;
+			AButton.RollOff += OnAButtonRollOffTunnel;
+			AButton.Click += OnAButtonClick;
+			AButton.Click += OnAButtonClickTunnel;
+			BButton.RollOn += OnBButtonRollOn;
+			BButton.RollOn += OnBButtonRollOnTunnel;
+			BButton.RollOff += OnBButtonRollOff;
+			BButton.RollOff += OnBButtonRollOffTunnel;
+			BButton.Click += OnBButtonClick;
+			BButton.Click += OnBButtonClickTunnel;
+			CButton.RollOn += OnCButtonRollOn;
+			CButton.RollOn += OnCButtonRollOnTunnel;
+			CButton.RollOff += OnCButtonRollOff;
+			CButton.RollOff += OnCButtonRollOffTunnel;
+			CButton.Click += OnCButtonClick;
+			CButton.Click += OnCButtonClickTunnel;
+			DButton.RollOn += OnDButtonRollOn;
+			DButton.RollOn += OnDButtonRollOnTunnel;
+			DButton.RollOff += OnDButtonRollOff;
+			DButton.RollOff += OnDButtonRollOffTunnel;
+			DButton.Click += OnDButtonClick;
+			DButton.Click += OnDButtonClickTunnel;
+			NextQuestion.Click += OnNextQuestionClick;
+			NextQuestion.Click += OnNextQuestionClickTunnel;
 			
 			
 			PostInitialize();
@@ -89,10 +131,11 @@ namespace BeefBall.Screens
 			if (!IsPaused)
 			{
 				
-				ButtonInstance.Activity();
-				ButtonInstance2.Activity();
-				ButtonInstance3.Activity();
-				ButtonInstance4.Activity();
+				AButton.Activity();
+				BButton.Activity();
+				CButton.Activity();
+				DButton.Activity();
+				NextQuestion.Activity();
 			}
 			else
 			{
@@ -113,25 +156,30 @@ namespace BeefBall.Screens
 		{
 			// Generated Destroy
 			
-			if (ButtonInstance != null)
+			if (AButton != null)
 			{
-				ButtonInstance.Destroy();
-				ButtonInstance.Detach();
+				AButton.Destroy();
+				AButton.Detach();
 			}
-			if (ButtonInstance2 != null)
+			if (BButton != null)
 			{
-				ButtonInstance2.Destroy();
-				ButtonInstance2.Detach();
+				BButton.Destroy();
+				BButton.Detach();
 			}
-			if (ButtonInstance3 != null)
+			if (CButton != null)
 			{
-				ButtonInstance3.Destroy();
-				ButtonInstance3.Detach();
+				CButton.Destroy();
+				CButton.Detach();
 			}
-			if (ButtonInstance4 != null)
+			if (DButton != null)
 			{
-				ButtonInstance4.Destroy();
-				ButtonInstance4.Detach();
+				DButton.Destroy();
+				DButton.Detach();
+			}
+			if (NextQuestion != null)
+			{
+				NextQuestion.Destroy();
+				NextQuestion.Detach();
 			}
 
 			base.Destroy();
@@ -145,21 +193,189 @@ namespace BeefBall.Screens
 		{
 			bool oldShapeManagerSuppressAdd = FlatRedBall.Math.Geometry.ShapeManager.SuppressAddingOnVisibilityTrue;
 			FlatRedBall.Math.Geometry.ShapeManager.SuppressAddingOnVisibilityTrue = true;
+			AButton.DisplayText = "A";
+			AButton.ScaleX = 25f;
+			if (AButton.Parent == null)
+			{
+				AButton.X = -75f;
+			}
+			else
+			{
+				AButton.RelativeX = -75f;
+			}
+			if (AButton.Parent == null)
+			{
+				AButton.Y = -90f;
+			}
+			else
+			{
+				AButton.RelativeY = -90f;
+			}
+			BButton.DisplayText = "B";
+			BButton.ScaleX = 25f;
+			if (BButton.Parent == null)
+			{
+				BButton.X = -25f;
+			}
+			else
+			{
+				BButton.RelativeX = -25f;
+			}
+			if (BButton.Parent == null)
+			{
+				BButton.Y = -90f;
+			}
+			else
+			{
+				BButton.RelativeY = -90f;
+			}
+			CButton.DisplayText = "C";
+			CButton.ScaleX = 25f;
+			if (CButton.Parent == null)
+			{
+				CButton.X = 25f;
+			}
+			else
+			{
+				CButton.RelativeX = 25f;
+			}
+			if (CButton.Parent == null)
+			{
+				CButton.Y = -90f;
+			}
+			else
+			{
+				CButton.RelativeY = -90f;
+			}
+			DButton.DisplayText = "D";
+			DButton.ScaleX = 25f;
+			if (DButton.Parent == null)
+			{
+				DButton.X = 75f;
+			}
+			else
+			{
+				DButton.RelativeX = 75f;
+			}
+			if (DButton.Parent == null)
+			{
+				DButton.Y = -90f;
+			}
+			else
+			{
+				DButton.RelativeY = -90f;
+			}
+			NextQuestion.DisplayText = "Next Question";
+			if (NextQuestion.Parent == null)
+			{
+				NextQuestion.Y = -90f;
+			}
+			else
+			{
+				NextQuestion.RelativeY = -90f;
+			}
 			FlatRedBall.Math.Geometry.ShapeManager.SuppressAddingOnVisibilityTrue = oldShapeManagerSuppressAdd;
 		}
 		public virtual void AddToManagersBottomUp ()
 		{
-			ButtonInstance.AddToManagers(mLayer);
-			ButtonInstance2.AddToManagers(mLayer);
-			ButtonInstance3.AddToManagers(mLayer);
-			ButtonInstance4.AddToManagers(mLayer);
+			AButton.AddToManagers(mLayer);
+			AButton.CurrentState = BeefBall.Entities.Button.VariableState.Disabled;
+			AButton.DisplayText = "A";
+			AButton.ScaleX = 25f;
+			if (AButton.Parent == null)
+			{
+				AButton.X = -75f;
+			}
+			else
+			{
+				AButton.RelativeX = -75f;
+			}
+			if (AButton.Parent == null)
+			{
+				AButton.Y = -90f;
+			}
+			else
+			{
+				AButton.RelativeY = -90f;
+			}
+			BButton.AddToManagers(mLayer);
+			BButton.CurrentState = BeefBall.Entities.Button.VariableState.Disabled;
+			BButton.DisplayText = "B";
+			BButton.ScaleX = 25f;
+			if (BButton.Parent == null)
+			{
+				BButton.X = -25f;
+			}
+			else
+			{
+				BButton.RelativeX = -25f;
+			}
+			if (BButton.Parent == null)
+			{
+				BButton.Y = -90f;
+			}
+			else
+			{
+				BButton.RelativeY = -90f;
+			}
+			CButton.AddToManagers(mLayer);
+			CButton.CurrentState = BeefBall.Entities.Button.VariableState.Disabled;
+			CButton.DisplayText = "C";
+			CButton.ScaleX = 25f;
+			if (CButton.Parent == null)
+			{
+				CButton.X = 25f;
+			}
+			else
+			{
+				CButton.RelativeX = 25f;
+			}
+			if (CButton.Parent == null)
+			{
+				CButton.Y = -90f;
+			}
+			else
+			{
+				CButton.RelativeY = -90f;
+			}
+			DButton.AddToManagers(mLayer);
+			DButton.CurrentState = BeefBall.Entities.Button.VariableState.Disabled;
+			DButton.DisplayText = "D";
+			DButton.ScaleX = 25f;
+			if (DButton.Parent == null)
+			{
+				DButton.X = 75f;
+			}
+			else
+			{
+				DButton.RelativeX = 75f;
+			}
+			if (DButton.Parent == null)
+			{
+				DButton.Y = -90f;
+			}
+			else
+			{
+				DButton.RelativeY = -90f;
+			}
+			NextQuestion.AddToManagers(mLayer);
+			NextQuestion.DisplayText = "Next Question";
+			if (NextQuestion.Parent == null)
+			{
+				NextQuestion.Y = -90f;
+			}
+			else
+			{
+				NextQuestion.RelativeY = -90f;
+			}
 		}
 		public virtual void ConvertToManuallyUpdated ()
 		{
-			ButtonInstance.ConvertToManuallyUpdated();
-			ButtonInstance2.ConvertToManuallyUpdated();
-			ButtonInstance3.ConvertToManuallyUpdated();
-			ButtonInstance4.ConvertToManuallyUpdated();
+			AButton.ConvertToManuallyUpdated();
+			BButton.ConvertToManuallyUpdated();
+			CButton.ConvertToManuallyUpdated();
+			DButton.ConvertToManuallyUpdated();
+			NextQuestion.ConvertToManuallyUpdated();
 		}
 		public static void LoadStaticContent (string contentManagerName)
 		{

@@ -172,7 +172,13 @@
       <DependentUpon>MainMenu.cs</DependentUpon>
     </Compile>
     <Compile Include="Screens\QuizScreen.cs" />
+    <Compile Include="Screens\QuizScreen.Event.cs">
+      <DependentUpon>QuizScreen.cs</DependentUpon>
+    </Compile>
     <Compile Include="Screens\QuizScreen.Generated.cs">
+      <DependentUpon>QuizScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\QuizScreen.Generated.Event.cs">
       <DependentUpon>QuizScreen.cs</DependentUpon>
     </Compile>
     <Compile Include="Screens\Screen.cs" />

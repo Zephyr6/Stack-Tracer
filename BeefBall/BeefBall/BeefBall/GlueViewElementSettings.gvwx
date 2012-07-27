@@ -16,11 +16,11 @@
     </ElementCameraSave>
     <ElementCameraSave>
       <CameraSave>
-        <X>569.500732</X>
-        <Y>32.1546059</Y>
+        <X>1514.97913</X>
+        <Y>-15.1534433</Y>
         <Z>40</Z>
         <Orthogonal>true</Orthogonal>
-        <OrthogonalHeight>753.4991</OrthogonalHeight>
+        <OrthogonalHeight>212.667419</OrthogonalHeight>
         <OrthogonalWidth>-1</OrthogonalWidth>
         <NearClipPlane>1</NearClipPlane>
         <FarClipPlane>1000</FarClipPlane>
@@ -286,6 +286,32 @@
         <FarClipPlane>1000</FarClipPlane>
       </CameraSave>
       <ElementName>Entities\HealthBar</ElementName>
+    </ElementCameraSave>
+    <ElementCameraSave>
+      <CameraSave>
+        <X>0</X>
+        <Y>0</Y>
+        <Z>40</Z>
+        <Orthogonal>true</Orthogonal>
+        <OrthogonalHeight>27.2147312</OrthogonalHeight>
+        <OrthogonalWidth>-1</OrthogonalWidth>
+        <NearClipPlane>1</NearClipPlane>
+        <FarClipPlane>1000</FarClipPlane>
+      </CameraSave>
+      <ElementName>Entities\ToQuiz</ElementName>
+    </ElementCameraSave>
+    <ElementCameraSave>
+      <CameraSave>
+        <X>0</X>
+        <Y>0</Y>
+        <Z>40</Z>
+        <Orthogonal>true</Orthogonal>
+        <OrthogonalHeight>480</OrthogonalHeight>
+        <OrthogonalWidth>-1</OrthogonalWidth>
+        <NearClipPlane>1</NearClipPlane>
+        <FarClipPlane>1000</FarClipPlane>
+      </CameraSave>
+      <ElementName>Screens\QuizScreen</ElementName>
     </ElementCameraSave>
   </ElementCameraSaves>
 </ElementSettingsSave>

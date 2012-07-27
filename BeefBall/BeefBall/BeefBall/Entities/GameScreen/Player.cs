@@ -73,7 +73,7 @@ namespace BeefBall.Entities.GameScreen
 
 		private void CustomDestroy()
 		{
-
+            TextManager.RemoveText(debugText);
 
 		}
 

@@ -66,7 +66,7 @@ namespace BeefBall.Entities.GameScreen
                         timeHit = 0;
                     }
                     else
-                        Destroy();
+                        this.Destroy();
                 }
             }
 
@@ -126,6 +126,8 @@ namespace BeefBall.Entities.GameScreen
         {
             delay = 1.5;
             CurrentState = VariableState.L_Die;
+            Velocity.X += 30;
+            Velocity.Y += 30;
         }
 
 		private void CustomDestroy()

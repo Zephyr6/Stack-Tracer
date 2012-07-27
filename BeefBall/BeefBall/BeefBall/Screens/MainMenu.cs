@@ -28,8 +28,8 @@ namespace BeefBall.Screens
 
 		void CustomInitialize()
 		{
-            SpriteManager.Camera.X += 50;
-            SpriteManager.Camera.Y += 40;
+            SpriteManager.Camera.X = 50;
+            SpriteManager.Camera.Y = 40;
 
 		}
 

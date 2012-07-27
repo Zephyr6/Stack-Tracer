@@ -2,22 +2,22 @@
 <BuildToolAssociationList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <BuildToolList>
     <BuildToolAssociation>
-      <BuildTool>../../../../users/carlos/desktop/game dev/xna/tmxglue/tmxtocsv.exe</BuildTool>
+      <BuildTool>../../tmxtocsv.exe</BuildTool>
       <SourceFileType>tmx</SourceFileType>
       <DestinationFileType>csv</DestinationFileType>
     </BuildToolAssociation>
     <BuildToolAssociation>
-      <BuildTool>../../../../users/carlos/desktop/game dev/xna/tmxglue/tmxtonntx.exe</BuildTool>
+      <BuildTool>../../tmxtonntx.exe</BuildTool>
       <SourceFileType>tmx</SourceFileType>
       <DestinationFileType>nntx</DestinationFileType>
     </BuildToolAssociation>
     <BuildToolAssociation>
-      <BuildTool>../../../../users/carlos/desktop/game dev/xna/tmxglue/tmxtoscnx.exe</BuildTool>
+      <BuildTool>../../tmxtoscnx.exe</BuildTool>
       <SourceFileType>tmx</SourceFileType>
       <DestinationFileType>scnx</DestinationFileType>
     </BuildToolAssociation>
     <BuildToolAssociation>
-      <BuildTool>../../../../users/carlos/desktop/game dev/xna/tmxglue/tmxtoshcx.exe</BuildTool>
+      <BuildTool>../../tmxtoshcx.exe</BuildTool>
       <SourceFileType>tmx</SourceFileType>
       <DestinationFileType>shcx</DestinationFileType>
     </BuildToolAssociation>

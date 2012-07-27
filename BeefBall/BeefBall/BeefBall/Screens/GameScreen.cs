@@ -38,7 +38,7 @@ namespace BeefBall.Screens
             SpriteManager.Camera.MinimumY = -93;
 
             SpriteManager.Camera.AttachTo(PlayerInstance.Body, true);
-            SpriteManager.Camera.BackgroundColor = Color.DeepSkyBlue;
+            //SpriteManager.Camera.BackgroundColor = Color.DeepSkyBlue;
 
             enemies = new List<Entities.GameScreen.Enemy>();
             enemies.Add(EnemyInstance);
@@ -60,10 +60,7 @@ namespace BeefBall.Screens
 		void CustomActivity(bool firstTimeCalled)
 		{
             CollisionActivity();
-
             CleanUpActivity();
-
-            Console.WriteLine("GS: {0} Player: {1}", enemies.Count, PlayerInstance.enemies.Count);
 		}
 
         private void CleanUpActivity()
@@ -78,6 +75,7 @@ namespace BeefBall.Screens
             {
                 enemies.Remove(en);
                 PlayerInstance.enemies.Remove(en);
+                en.Destroy();
             }
         }
 
@@ -85,12 +83,6 @@ namespace BeefBall.Screens
         {
             foreach(Entities.CapacitorPlatform c in capacitorPlatforms)
             {
-                //if (PlayerInstance.Body.CollideAgainstBounce(c.Collision, 0, 1, 0))
-                //{
-                //    if (PlayerInstance.CurrentState == Entities.GameScreen.Player.VariableState.Jumping && PlayerInstance.Body.LastCollisionTangent.Y == 0)
-                //        PlayerInstance.Land();
-                //}
-
                 Vector3 positionBefore = PlayerInstance.Position;
                 if (PlayerInstance.Body.CollideAgainstBounce(c.Collision, 0, 1, 0))
                 {
@@ -123,11 +115,27 @@ namespace BeefBall.Screens
                     en.Body.CollideAgainstBounce(c.Collision, 0, 1, 0);
                 }
             }
+
+            if (PlayerInstance.Body.CollideAgainst(ToQuizInstance.Body))
+            {
+                SpriteManager.Camera.Detach();
+                SpriteManager.Camera.X = 0;
+                SpriteManager.Camera.Y = 0;
+                Console.WriteLine("RAWR: " + typeof(QuizScreen).FullName);
+                this.MoveToScreen(typeof(QuizScreen).FullName);
+            }
         }
 
 		void CustomDestroy()
 		{
+            foreach (Entities.GameScreen.Enemy en in enemies)
+                en.Destroy();
 
+            foreach (Entities.CapacitorPlatform cap in capacitorPlatforms)
+                cap.Destroy();
+
+            enemies.Clear();
+            capacitorPlatforms.Clear();
 
 		}
 

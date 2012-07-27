@@ -147,6 +147,10 @@
     <Compile Include="Entities\TextArial.Generated.cs">
       <DependentUpon>TextArial.cs</DependentUpon>
     </Compile>
+    <Compile Include="Entities\ToQuiz.cs" />
+    <Compile Include="Entities\ToQuiz.Generated.cs">
+      <DependentUpon>ToQuiz.cs</DependentUpon>
+    </Compile>
     <Compile Include="GlobalContent.Generated.cs" />
     <Compile Include="Performance\IPoolable.Generated.cs" />
     <Compile Include="Performance\PoolList.Generated.cs" />

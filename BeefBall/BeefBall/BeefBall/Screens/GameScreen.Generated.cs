@@ -73,6 +73,7 @@ namespace BeefBall.Screens
 		private BeefBall.Entities.CapacitorPlatform CapacitorPlatformInstance7;
 		private BeefBall.Entities.CapacitorPlatform CapacitorPlatformInstance8;
 		private PositionedObjectList<HealthBar> HealthBarList;
+		private BeefBall.Entities.ToQuiz ToQuizInstance;
 
 		public GameScreen()
 			: base("GameScreen")
@@ -114,6 +115,8 @@ namespace BeefBall.Screens
 			CapacitorPlatformInstance8 = new BeefBall.Entities.CapacitorPlatform(ContentManagerName, false);
 			CapacitorPlatformInstance8.Name = "CapacitorPlatformInstance8";
 			HealthBarList = new PositionedObjectList<HealthBar>();
+			ToQuizInstance = new BeefBall.Entities.ToQuiz(ContentManagerName, false);
+			ToQuizInstance.Name = "ToQuizInstance";
 			
 			
 			PostInitialize();
@@ -163,6 +166,7 @@ namespace BeefBall.Screens
 						HealthBarList[i].Activity();
 					}
 				}
+				ToQuizInstance.Activity();
 			}
 			else
 			{
@@ -259,6 +263,11 @@ namespace BeefBall.Screens
 			for (int i = HealthBarList.Count - 1; i > -1; i--)
 			{
 				HealthBarList[i].Destroy();
+			}
+			if (ToQuizInstance != null)
+			{
+				ToQuizInstance.Destroy();
+				ToQuizInstance.Detach();
 			}
 
 			base.Destroy();
@@ -503,6 +512,22 @@ namespace BeefBall.Screens
 			else
 			{
 				CapacitorPlatformInstance8.RelativeY = -270f;
+			}
+			if (ToQuizInstance.Parent == null)
+			{
+				ToQuizInstance.X = 1530f;
+			}
+			else
+			{
+				ToQuizInstance.RelativeX = 1530f;
+			}
+			if (ToQuizInstance.Parent == null)
+			{
+				ToQuizInstance.Y = -5f;
+			}
+			else
+			{
+				ToQuizInstance.RelativeY = -5f;
 			}
 			FlatRedBall.Math.Geometry.ShapeManager.SuppressAddingOnVisibilityTrue = oldShapeManagerSuppressAdd;
 		}
@@ -753,6 +778,23 @@ namespace BeefBall.Screens
 			{
 				CapacitorPlatformInstance8.RelativeY = -270f;
 			}
+			ToQuizInstance.AddToManagers(mLayer);
+			if (ToQuizInstance.Parent == null)
+			{
+				ToQuizInstance.X = 1530f;
+			}
+			else
+			{
+				ToQuizInstance.RelativeX = 1530f;
+			}
+			if (ToQuizInstance.Parent == null)
+			{
+				ToQuizInstance.Y = -5f;
+			}
+			else
+			{
+				ToQuizInstance.RelativeY = -5f;
+			}
 		}
 		public virtual void ConvertToManuallyUpdated ()
 		{
@@ -773,6 +815,7 @@ namespace BeefBall.Screens
 			{
 				HealthBarList[i].ConvertToManuallyUpdated();
 			}
+			ToQuizInstance.ConvertToManuallyUpdated();
 		}
 		public static void LoadStaticContent (string contentManagerName)
 		{
@@ -790,6 +833,7 @@ namespace BeefBall.Screens
 			BeefBall.Entities.GameScreen.Enemy.LoadStaticContent(contentManagerName);
 			BeefBall.Entities.CapacitorPlatform.LoadStaticContent(contentManagerName);
 			BeefBall.Entities.ResistorStamp.LoadStaticContent(contentManagerName);
+			BeefBall.Entities.ToQuiz.LoadStaticContent(contentManagerName);
 			CustomLoadStaticContent(contentManagerName);
 		}
 		object GetMember (string memberName)

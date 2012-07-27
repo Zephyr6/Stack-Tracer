@@ -27,6 +27,7 @@ namespace BeefBall.Screens
                 if (threeQuestions[questionIndex].answerIndex == 0)
                 {
                     numCorrect++;
+                    
                     //AButton.DisplayText = "Correct";
                     //this.AButton.CurrentState = Button.VariableState.Pressed;
                     //this.BButton.CurrentState = Button.VariableState.Disabled;
@@ -39,6 +40,7 @@ namespace BeefBall.Screens
                 }
                
                 questionIndex++;
+                UpdateNumCorrect();
                 NextQuestionVisible();
             }
             //else
@@ -59,6 +61,7 @@ namespace BeefBall.Screens
                 if (threeQuestions[questionIndex].answerIndex == 1)
                 {
                     numCorrect++;
+                    
                     //BButton.DisplayText = "Correct";
                     //this.BButton.CurrentState = Button.VariableState.Pressed;
                     //this.AButton.CurrentState = Button.VariableState.Disabled;
@@ -71,6 +74,7 @@ namespace BeefBall.Screens
                     //BButton.DisplayText = threeQuestions[questionIndex].answerIndex.ToString();
                 }
                 questionIndex++;
+                UpdateNumCorrect();
                 NextQuestionVisible();
 
             }
@@ -90,7 +94,8 @@ namespace BeefBall.Screens
             {
                 if (threeQuestions[questionIndex].answerIndex == 2)
                 {
-                    numCorrect++
+                    numCorrect++;
+                   
                     //CButton.DisplayText = "Correct";
                     //this.CButton.CurrentState = Button.VariableState.Pressed;
                     //this.AButton.CurrentState = Button.VariableState.Disabled;
@@ -102,6 +107,7 @@ namespace BeefBall.Screens
                     //CButton.DisplayText = threeQuestions[questionIndex].answerIndex.ToString();
                 }
                 questionIndex++;
+                UpdateNumCorrect();
                 NextQuestionVisible();
             }
            
@@ -131,6 +137,7 @@ namespace BeefBall.Screens
                 if (threeQuestions[questionIndex].answerIndex == 3)
                 {
                     numCorrect++;
+                    
                     //DButton.DisplayText = "Correct";
                     //this.DButton.CurrentState = Button.VariableState.Pressed;
                     //this.AButton.CurrentState = Button.VariableState.Disabled;
@@ -142,6 +149,7 @@ namespace BeefBall.Screens
                     //DButton.DisplayText = threeQuestions[questionIndex].answerIndex.ToString();
                 }
                 questionIndex++;
+                UpdateNumCorrect();
                 NextQuestionVisible();
             }
             
@@ -177,6 +185,13 @@ namespace BeefBall.Screens
             this.CButton.Visible = false;
             this.DButton.Visible = false;
             this.NextQuestion.Visible = false;  
+        }
+
+        void UpdateNumCorrect() 
+        {
+            this.NumberCorrect.CurrentState = Button.VariableState.Hover;
+            string score = string.Format("{0} out of {1}", numCorrect, questionIndex);
+            NumberCorrect.DisplayText = (score);
         }
        
 

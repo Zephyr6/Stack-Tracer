@@ -803,6 +803,41 @@
           <AttachToContainer>true</AttachToContainer>
           <AddToManagers>true</AddToManagers>
         </NamedObjectSave>
+        <NamedObjectSave>
+          <CustomProperty>
+            <Type>string</Type>
+            <Member>SpriteFrameInstanceCurrentChainName</Member>
+          </CustomProperty>
+          <CustomProperty>
+            <Type>string</Type>
+            <Member>DisplayText</Member>
+            <ValueAsString>0 out of 0</ValueAsString>
+          </CustomProperty>
+          <CustomProperty>
+            <Type>float</Type>
+            <Member>ScaleX</Member>
+          </CustomProperty>
+          <CustomProperty>
+            <Type>float</Type>
+            <Member>X</Member>
+            <ValueAsFloat>130</ValueAsFloat>
+          </CustomProperty>
+          <CustomProperty>
+            <Type>float</Type>
+            <Member>Y</Member>
+            <ValueAsFloat>130</ValueAsFloat>
+          </CustomProperty>
+          <CustomProperty>
+            <Type>float</Type>
+            <Member>Z</Member>
+          </CustomProperty>
+          <SourceType>Entity</SourceType>
+          <SourceClassType>Entities\Button</SourceClassType>
+          <InstanceName>NumberCorrect</InstanceName>
+          <AttachToContainer>true</AttachToContainer>
+          <AddToManagers>true</AddToManagers>
+          <CurrentState>Disabled</CurrentState>
+        </NamedObjectSave>
       </NamedObjects>
     </ScreenSave>
   </Screens>

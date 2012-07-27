@@ -46,6 +46,7 @@ namespace BeefBall.Screens
 		private BeefBall.Entities.Button CButton;
 		private BeefBall.Entities.Button DButton;
 		private BeefBall.Entities.Button NextQuestion;
+		private BeefBall.Entities.Button NumberCorrect;
 		public event FlatRedBall.Gui.WindowEvent AButtonRollOn;
 		public event FlatRedBall.Gui.WindowEvent AButtonRollOff;
 		public event FlatRedBall.Gui.WindowEvent AButtonClick;
@@ -79,6 +80,8 @@ namespace BeefBall.Screens
 			DButton.Name = "DButton";
 			NextQuestion = new BeefBall.Entities.Button(ContentManagerName, false);
 			NextQuestion.Name = "NextQuestion";
+			NumberCorrect = new BeefBall.Entities.Button(ContentManagerName, false);
+			NumberCorrect.Name = "NumberCorrect";
 			AButton.RollOn += OnAButtonRollOn;
 			AButton.RollOn += OnAButtonRollOnTunnel;
 			AButton.RollOff += OnAButtonRollOff;
@@ -136,6 +139,7 @@ namespace BeefBall.Screens
 				CButton.Activity();
 				DButton.Activity();
 				NextQuestion.Activity();
+				NumberCorrect.Activity();
 			}
 			else
 			{
@@ -180,6 +184,11 @@ namespace BeefBall.Screens
 			{
 				NextQuestion.Destroy();
 				NextQuestion.Detach();
+			}
+			if (NumberCorrect != null)
+			{
+				NumberCorrect.Destroy();
+				NumberCorrect.Detach();
 			}
 
 			base.Destroy();
@@ -273,6 +282,23 @@ namespace BeefBall.Screens
 			else
 			{
 				NextQuestion.RelativeY = -90f;
+			}
+			NumberCorrect.DisplayText = "0 out of 0";
+			if (NumberCorrect.Parent == null)
+			{
+				NumberCorrect.X = 130f;
+			}
+			else
+			{
+				NumberCorrect.RelativeX = 130f;
+			}
+			if (NumberCorrect.Parent == null)
+			{
+				NumberCorrect.Y = 130f;
+			}
+			else
+			{
+				NumberCorrect.RelativeY = 130f;
 			}
 			FlatRedBall.Math.Geometry.ShapeManager.SuppressAddingOnVisibilityTrue = oldShapeManagerSuppressAdd;
 		}
@@ -368,6 +394,25 @@ namespace BeefBall.Screens
 			{
 				NextQuestion.RelativeY = -90f;
 			}
+			NumberCorrect.AddToManagers(mLayer);
+			NumberCorrect.CurrentState = BeefBall.Entities.Button.VariableState.Disabled;
+			NumberCorrect.DisplayText = "0 out of 0";
+			if (NumberCorrect.Parent == null)
+			{
+				NumberCorrect.X = 130f;
+			}
+			else
+			{
+				NumberCorrect.RelativeX = 130f;
+			}
+			if (NumberCorrect.Parent == null)
+			{
+				NumberCorrect.Y = 130f;
+			}
+			else
+			{
+				NumberCorrect.RelativeY = 130f;
+			}
 		}
 		public virtual void ConvertToManuallyUpdated ()
 		{
@@ -376,6 +421,7 @@ namespace BeefBall.Screens
 			CButton.ConvertToManuallyUpdated();
 			DButton.ConvertToManuallyUpdated();
 			NextQuestion.ConvertToManuallyUpdated();
+			NumberCorrect.ConvertToManuallyUpdated();
 		}
 		public static void LoadStaticContent (string contentManagerName)
 		{

@@ -121,7 +121,6 @@ namespace BeefBall.Screens
                 SpriteManager.Camera.Detach();
                 SpriteManager.Camera.X = 0;
                 SpriteManager.Camera.Y = 0;
-                Console.WriteLine("RAWR: " + typeof(QuizScreen).FullName);
                 this.MoveToScreen(typeof(QuizScreen).FullName);
             }
         }

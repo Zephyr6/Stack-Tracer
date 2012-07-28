@@ -299,11 +299,11 @@ namespace BeefBall.Screens
 			}
 			if (EnemyInstance.Parent == null)
 			{
-				EnemyInstance.X = 150f;
+				EnemyInstance.X = 280f;
 			}
 			else
 			{
-				EnemyInstance.RelativeX = 150f;
+				EnemyInstance.RelativeX = 280f;
 			}
 			if (EnemyInstance.Parent == null)
 			{
@@ -313,22 +313,24 @@ namespace BeefBall.Screens
 			{
 				EnemyInstance.RelativeY = 0f;
 			}
+			EnemyInstance.PathAreaScaleX = 35f;
 			if (EnemyInstance2.Parent == null)
 			{
-				EnemyInstance2.X = 120f;
+				EnemyInstance2.X = 470f;
 			}
 			else
 			{
-				EnemyInstance2.RelativeX = 120f;
+				EnemyInstance2.RelativeX = 470f;
 			}
 			if (EnemyInstance2.Parent == null)
 			{
-				EnemyInstance2.Y = 0f;
+				EnemyInstance2.Y = 30f;
 			}
 			else
 			{
-				EnemyInstance2.RelativeY = 0f;
+				EnemyInstance2.RelativeY = 30f;
 			}
+			EnemyInstance2.PathAreaScaleX = 35f;
 			if (CapacitorPlatformInstance.Parent == null)
 			{
 				CapacitorPlatformInstance.X = 92f;
@@ -483,11 +485,11 @@ namespace BeefBall.Screens
 			}
 			if (CapacitorPlatformInstance7.Parent == null)
 			{
-				CapacitorPlatformInstance7.X = 1330f;
+				CapacitorPlatformInstance7.X = 1310f;
 			}
 			else
 			{
-				CapacitorPlatformInstance7.RelativeX = 1330f;
+				CapacitorPlatformInstance7.RelativeX = 1310f;
 			}
 			if (CapacitorPlatformInstance7.Parent == null)
 			{
@@ -553,11 +555,11 @@ namespace BeefBall.Screens
 			mEnemyInstance.AddToManagers(SpriteLayer);
 			if (mEnemyInstance.Parent == null)
 			{
-				mEnemyInstance.X = 150f;
+				mEnemyInstance.X = 280f;
 			}
 			else
 			{
-				mEnemyInstance.RelativeX = 150f;
+				mEnemyInstance.RelativeX = 280f;
 			}
 			if (mEnemyInstance.Parent == null)
 			{
@@ -567,23 +569,25 @@ namespace BeefBall.Screens
 			{
 				mEnemyInstance.RelativeY = 0f;
 			}
+			mEnemyInstance.PathAreaScaleX = 35f;
 			mEnemyInstance2.AddToManagers(SpriteLayer);
 			if (mEnemyInstance2.Parent == null)
 			{
-				mEnemyInstance2.X = 120f;
+				mEnemyInstance2.X = 470f;
 			}
 			else
 			{
-				mEnemyInstance2.RelativeX = 120f;
+				mEnemyInstance2.RelativeX = 470f;
 			}
 			if (mEnemyInstance2.Parent == null)
 			{
-				mEnemyInstance2.Y = 0f;
+				mEnemyInstance2.Y = 30f;
 			}
 			else
 			{
-				mEnemyInstance2.RelativeY = 0f;
+				mEnemyInstance2.RelativeY = 30f;
 			}
+			mEnemyInstance2.PathAreaScaleX = 35f;
 			CapacitorPlatformInstance.AddToManagers(mLayer);
 			if (CapacitorPlatformInstance.Parent == null)
 			{
@@ -747,11 +751,11 @@ namespace BeefBall.Screens
 			CapacitorPlatformInstance7.AddToManagers(mLayer);
 			if (CapacitorPlatformInstance7.Parent == null)
 			{
-				CapacitorPlatformInstance7.X = 1330f;
+				CapacitorPlatformInstance7.X = 1310f;
 			}
 			else
 			{
-				CapacitorPlatformInstance7.RelativeX = 1330f;
+				CapacitorPlatformInstance7.RelativeX = 1310f;
 			}
 			if (CapacitorPlatformInstance7.Parent == null)
 			{

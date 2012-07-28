@@ -138,6 +138,7 @@ namespace BeefBall.Entities.GameScreen
 				return mHead;
 			}
 		}
+		private FlatRedBall.Math.Geometry.AxisAlignedRectangle PathArea;
 		public Microsoft.Xna.Framework.Color BodyColor
 		{
 			get
@@ -161,6 +162,17 @@ namespace BeefBall.Entities.GameScreen
 			}
 		}
 		public int StartingHealth = 50;
+		public float PathAreaScaleX
+		{
+			get
+			{
+				return PathArea.ScaleX;
+			}
+			set
+			{
+				PathArea.ScaleX = value;
+			}
+		}
 		public int Index { get; set; }
 		public bool Used { get; set; }
 		protected Layer LayerProvidedByContainer = null;
@@ -188,6 +200,7 @@ namespace BeefBall.Entities.GameScreen
 			mBody = new FlatRedBall.Math.Geometry.Circle();
 			EntireScene = EnemySpriteScene.Sprites.FindByName("testsprite32x321").Clone();
 			mHead = new FlatRedBall.Math.Geometry.Circle();
+			PathArea = new FlatRedBall.Math.Geometry.AxisAlignedRectangle();
 			
 			PostInitialize();
 			if (addToManagers)
@@ -232,6 +245,10 @@ namespace BeefBall.Entities.GameScreen
 			if (Head != null)
 			{
 				Head.Detach(); ShapeManager.Remove(Head);
+			}
+			if (PathArea != null)
+			{
+				PathArea.Detach(); ShapeManager.Remove(PathArea);
 			}
 
 
@@ -295,11 +312,16 @@ namespace BeefBall.Entities.GameScreen
 				Head.RelativeY = 5f;
 			}
 			Head.Radius = 9f;
+			PathArea.Visible = false;
+			PathArea.ScaleX = 10f;
+			PathArea.ScaleY = 10f;
+			PathArea.Color = Color.Cyan;
 			X = 0f;
 			Y = 0f;
 			BodyColor = Color.Aqua;
 			EntireSceneCurrentChainName = "L_Hustle";
 			StartingHealth = 50;
+			PathAreaScaleX = 10f;
 			FlatRedBall.Math.Geometry.ShapeManager.SuppressAddingOnVisibilityTrue = oldShapeManagerSuppressAdd;
 		}
 		public virtual void AddToManagersBottomUp (Layer layerToAddTo)
@@ -359,6 +381,11 @@ namespace BeefBall.Entities.GameScreen
 				mHead.RelativeY = 5f;
 			}
 			mHead.Radius = 9f;
+			ShapeManager.AddToLayer(PathArea, layerToAddTo);
+			PathArea.Visible = false;
+			PathArea.ScaleX = 10f;
+			PathArea.ScaleY = 10f;
+			PathArea.Color = Color.Cyan;
 			X = oldX;
 			Y = oldY;
 			Z = oldZ;
@@ -593,6 +620,7 @@ namespace BeefBall.Entities.GameScreen
 			InstructionManager.IgnorePausingFor(Body);
 			InstructionManager.IgnorePausingFor(EntireScene);
 			InstructionManager.IgnorePausingFor(Head);
+			InstructionManager.IgnorePausingFor(PathArea);
 		}
 
     }

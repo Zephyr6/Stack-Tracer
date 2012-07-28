@@ -31,6 +31,7 @@ using FlatRedBall.Broadcasting;
 using BeefBall.Entities;
 using BeefBall.Entities.GameScreen;
 using FlatRedBall;
+using Microsoft.Xna.Framework.Audio;
 
 namespace BeefBall.Screens
 {
@@ -41,6 +42,7 @@ namespace BeefBall.Screens
 		static bool HasBeenLoadedWithGlobalContentManager = false;
 		#endif
 		private Scene MyBackground;
+		private SoundEffect beep;
 		
 		private BeefBall.Entities.Button StartGameButton;
 		private BeefBall.Entities.Button AboutButton;
@@ -59,7 +61,6 @@ namespace BeefBall.Screens
 		public MainMenu()
 			: base("MainMenu")
 		{
-            
 		}
 
         public override void Initialize(bool addToManagers)
@@ -70,6 +71,7 @@ namespace BeefBall.Screens
 			{
 			}
 			MyBackground = FlatRedBallServices.Load<Scene>(@"content/screens/mainmenu/mybackground.scnx", ContentManagerName);
+			beep = FlatRedBallServices.Load<SoundEffect>(@"content/screens/mainmenu/beep", ContentManagerName);
 			scene = MyBackground;
 			StartGameButton = new BeefBall.Entities.Button(ContentManagerName, false);
 			StartGameButton.Name = "StartGameButton";
@@ -152,6 +154,7 @@ namespace BeefBall.Screens
 			{
 				MyBackground.RemoveFromManagers(false);
 			}
+			beep.Dispose();
 			
 			if (StartGameButton != null)
 			{
@@ -329,6 +332,8 @@ namespace BeefBall.Screens
 			{
 				case  "MyBackground":
 					return MyBackground;
+				case  "beep":
+					return beep;
 			}
 			return null;
 		}

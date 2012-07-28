@@ -186,6 +186,11 @@
       <Importer>Mp3Importer</Importer>
       <Processor>SoundEffectProcessor</Processor>
     </Compile>
+    <Compile Include="Screens\MainMenu\beep.wav">
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+      <Name>beep</Name>
+    </Compile>
     <Compile Include="StartSound.mp3">
       <Name>StartSound</Name>
       <Importer>Mp3Importer</Importer>

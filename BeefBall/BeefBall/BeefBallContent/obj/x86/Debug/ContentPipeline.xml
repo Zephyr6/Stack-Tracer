@@ -64,6 +64,15 @@
       <Output>C:\Users\Carlos\Documents\GitHub\Stack-Tracer\BeefBall\BeefBall\BeefBall\bin\x86\Debug\Content\StartSound.xnb</Output>
       <Time>2012-07-27T09:37:18.6580052-06:00</Time>
     </Item>
+    <Item>
+      <Source>Screens\MainMenu\beep.wav</Source>
+      <Name>Screens\MainMenu\beep</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Carlos\Documents\GitHub\Stack-Tracer\BeefBall\BeefBall\BeefBall\bin\x86\Debug\Content\Screens\MainMenu\beep.xnb</Output>
+      <Time>2012-07-27T14:24:44.6755418-06:00</Time>
+    </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
       <TargetPlatform>Windows</TargetPlatform>

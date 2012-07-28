@@ -37,9 +37,6 @@ namespace BeefBall.Entities.GameScreen
 
         int facing;
 
-        public static int RIGHT = 0;
-        public static int LEFT = 1;
-
         int punchPower = 10;
 
         public int PlayerIndex
@@ -52,7 +49,7 @@ namespace BeefBall.Entities.GameScreen
 
         private void CustomInitialize()
         {
-            facing = RIGHT;
+            facing = Game1.RIGHT;
             CurrentState = VariableState.R_Idle;
             
             this.PlayerIndex = 0;
@@ -129,9 +126,9 @@ namespace BeefBall.Entities.GameScreen
             int dir = facing;
 
             if (mGamePad.LeftStick.Position.X > 0)
-                dir = RIGHT;
+                dir = Game1.RIGHT;
             else if (mGamePad.LeftStick.Position.X < 0)
-                dir = LEFT;
+                dir = Game1.LEFT ;
 
             facing = dir;
 
@@ -140,9 +137,9 @@ namespace BeefBall.Entities.GameScreen
 
         public void Land()
         {
-            if(GetFacing() == RIGHT)
+            if (GetFacing() == Game1.RIGHT)
                 CurrentState = VariableState.R_Idle;
-            else if(GetFacing() == LEFT)
+            else if (GetFacing() == Game1.LEFT)
                 CurrentState = VariableState.L_Idle;
         }
 
@@ -166,16 +163,16 @@ namespace BeefBall.Entities.GameScreen
 
                     if (CurrentState == VariableState.L_Attack2 || CurrentState == VariableState.R_Attack2)
                     {
-                        if (GetFacing() == RIGHT)
+                        if (GetFacing() == Game1.RIGHT)
                             CurrentState = VariableState.R_Attack;
-                        else if (GetFacing() == LEFT)
+                        else if (GetFacing() == Game1.LEFT)
                             CurrentState = VariableState.L_Attack;
                     }
                     else
                     {
-                        if (GetFacing() == RIGHT)
+                        if (GetFacing() == Game1.RIGHT)
                             CurrentState = VariableState.R_Attack2;
-                        else if (GetFacing() == LEFT)
+                        else if (GetFacing() == Game1.LEFT)
                             CurrentState = VariableState.L_Attack2;
                     }
 
@@ -184,7 +181,7 @@ namespace BeefBall.Entities.GameScreen
                 {
                     timePunched = TimeManager.CurrentTime;
 
-                    if (GetFacing() == RIGHT)
+                    if (GetFacing() == Game1.RIGHT)
                         CurrentState = VariableState.R_Attack;
                     else
                         CurrentState = VariableState.L_Attack;
@@ -195,7 +192,7 @@ namespace BeefBall.Entities.GameScreen
                     int dmg = rand.Next(punchPower - (punchPower / 3), punchPower + (punchPower / 4));
                     Console.WriteLine("DAMAGE: {0} Min/Max: ({1}, {2})", dmg, punchPower - (punchPower / 3), punchPower + (punchPower / 4));
 
-                    if (GetFacing() == RIGHT)
+                    if (GetFacing() == Game1.RIGHT)
                     {
                         if ((RightAttack.CollideAgainst(el.Body) || RightAttack.CollideAgainst(el.Head))  && el.canBeHit)
                         {
@@ -204,7 +201,7 @@ namespace BeefBall.Entities.GameScreen
                             el.Hurt(dmg);
                         }
                     }
-                    else if (GetFacing() == LEFT)
+                    else if (GetFacing() == Game1.LEFT)
                     {
                         if ((LeftAttack.CollideAgainst(el.Body) || LeftAttack.CollideAgainst(el.Head)) && el.canBeHit)
                         {
@@ -218,9 +215,9 @@ namespace BeefBall.Entities.GameScreen
 
             if (timePunched > 0 && (TimeManager.SecondsSince(timePunched) >= InnerExScene.CurrentChain.TotalLength))
             {
-                if (GetFacing() == RIGHT)
+                if (GetFacing() == Game1.RIGHT)
                     CurrentState = VariableState.R_Idle;
-                else if (GetFacing() == LEFT)
+                else if (GetFacing() == Game1.LEFT)
                     CurrentState = VariableState.L_Idle;
 
                 timePunched = 0;

@@ -24,6 +24,9 @@ namespace BeefBall
         public static SoundEffect AboutGameSFX;
         public static SoundEffect ExitGameSFX;
 
+        public static int RIGHT = 0;
+        public static int LEFT = 1;
+
         public Game1()
         {
             graphics = new GraphicsDeviceManager(this);

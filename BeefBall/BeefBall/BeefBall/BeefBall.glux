@@ -61,7 +61,7 @@
           <CustomProperty>
             <Type>float</Type>
             <Member>X</Member>
-            <ValueAsFloat>150</ValueAsFloat>
+            <ValueAsFloat>280</ValueAsFloat>
           </CustomProperty>
           <CustomProperty>
             <Type>float</Type>
@@ -79,6 +79,11 @@
           <CustomProperty>
             <Type>int</Type>
             <Member>StartingHealth</Member>
+          </CustomProperty>
+          <CustomProperty>
+            <Type>float</Type>
+            <Member>PathAreaScaleX</Member>
+            <ValueAsFloat>35</ValueAsFloat>
           </CustomProperty>
           <SourceType>Entity</SourceType>
           <SourceClassType>Entities\GameScreen\Enemy</SourceClassType>
@@ -92,12 +97,12 @@
           <CustomProperty>
             <Type>float</Type>
             <Member>X</Member>
-            <ValueAsFloat>120</ValueAsFloat>
+            <ValueAsFloat>470</ValueAsFloat>
           </CustomProperty>
           <CustomProperty>
             <Type>float</Type>
             <Member>Y</Member>
-            <ValueAsFloat>0</ValueAsFloat>
+            <ValueAsFloat>30</ValueAsFloat>
           </CustomProperty>
           <CustomProperty>
             <Type>Color</Type>
@@ -110,6 +115,11 @@
           <CustomProperty>
             <Type>int</Type>
             <Member>StartingHealth</Member>
+          </CustomProperty>
+          <CustomProperty>
+            <Type>float</Type>
+            <Member>PathAreaScaleX</Member>
+            <ValueAsFloat>35</ValueAsFloat>
           </CustomProperty>
           <SourceType>Entity</SourceType>
           <SourceClassType>Entities\GameScreen\Enemy</SourceClassType>
@@ -314,7 +324,7 @@
           <CustomProperty>
             <Type>float</Type>
             <Member>X</Member>
-            <ValueAsFloat>1330</ValueAsFloat>
+            <ValueAsFloat>1310</ValueAsFloat>
           </CustomProperty>
           <CustomProperty>
             <Type>float</Type>
@@ -440,6 +450,10 @@
       <ReferencedFiles>
         <ReferencedFileSave>
           <Name>Screens/MainMenu/MyBackground.scnx</Name>
+          <IsSharedStatic>false</IsSharedStatic>
+        </ReferencedFileSave>
+        <ReferencedFileSave>
+          <Name>Screens/MainMenu/beep.wav</Name>
           <IsSharedStatic>false</IsSharedStatic>
         </ReferencedFileSave>
       </ReferencedFiles>
@@ -1315,6 +1329,19 @@
           <Type>int</Type>
           <DefaultValue xsi:type="xsd:int">50</DefaultValue>
         </CustomVariable>
+        <CustomVariable>
+          <Properties>
+            <PropertySave>
+              <Name>Type</Name>
+              <ValueAsString>float</ValueAsString>
+            </PropertySave>
+          </Properties>
+          <Name>PathAreaScaleX</Name>
+          <Type>float</Type>
+          <DefaultValue xsi:type="xsd:float">10</DefaultValue>
+          <SourceObject>PathArea</SourceObject>
+          <SourceObjectProperty>ScaleX</SourceObjectProperty>
+        </CustomVariable>
       </CustomVariables>
       <Name>Entities\GameScreen\Enemy</Name>
       <NamedObjects>
@@ -1434,6 +1461,41 @@
           <InstanceName>Head</InstanceName>
           <HasPublicProperty>true</HasPublicProperty>
           <AttachToContainer>true</AttachToContainer>
+          <AddToManagers>true</AddToManagers>
+        </NamedObjectSave>
+        <NamedObjectSave>
+          <CustomProperty>
+            <Type>bool</Type>
+            <Member>Visible</Member>
+            <ValueAsBool>false</ValueAsBool>
+          </CustomProperty>
+          <CustomProperty>
+            <Type>float</Type>
+            <Member>X</Member>
+          </CustomProperty>
+          <CustomProperty>
+            <Type>float</Type>
+            <Member>Y</Member>
+          </CustomProperty>
+          <CustomProperty>
+            <Type>float</Type>
+            <Member>ScaleX</Member>
+            <ValueAsFloat>10</ValueAsFloat>
+          </CustomProperty>
+          <CustomProperty>
+            <Type>float</Type>
+            <Member>ScaleY</Member>
+            <ValueAsFloat>10</ValueAsFloat>
+          </CustomProperty>
+          <CustomProperty>
+            <Type>Color</Type>
+            <Member>Color</Member>
+            <ValueAsString>Cyan</ValueAsString>
+          </CustomProperty>
+          <SourceType>FlatRedBallType</SourceType>
+          <SourceClassType>AxisAlignedRectangle</SourceClassType>
+          <InstanceName>PathArea</InstanceName>
+          <AttachToContainer>false</AttachToContainer>
           <AddToManagers>true</AddToManagers>
         </NamedObjectSave>
       </NamedObjects>

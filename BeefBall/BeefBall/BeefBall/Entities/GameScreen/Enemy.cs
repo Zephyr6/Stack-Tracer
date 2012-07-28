@@ -30,8 +30,16 @@ namespace BeefBall.Entities.GameScreen
         public bool isDead;
         public bool engaged;
 
+        int facing;
+        int speed = 30;
+
+        bool isWalking = false;
+        double idleDelay = 1;
+        double timeIdle;
+
         double delay = 0.5;
         double timeHit = 0;
+        double timeWalking;
 
         int mHealth;
         public int Health{ get{return mHealth;} set {mHealth = value;}}
@@ -49,29 +57,97 @@ namespace BeefBall.Entities.GameScreen
             mHealthBar.AttachTo(this, true);
             mHealthBar.Visible = false;
             Acceleration.Y = -40F;
+
+            Velocity.X = -speed;
+            CurrentState = VariableState.L_Walking;
+            facing = Game1.LEFT;
+
+            PathArea.X = X - (PathArea.ScaleX / 2) + (Body.Radius);
+            PathArea.Y = Y;
+            PathArea.Acceleration = Vector3.Zero;
 		}
 
 		private void CustomActivity()
 		{
+            if (CurrentState != VariableState.L_Hurt && CurrentState != VariableState.R_Hurt && CurrentState != VariableState.L_Die && CurrentState != VariableState.R_Die)
+                PathActivity();
+
+            HitActivity();
+            DamageTextActivity();
+		}
+
+        void PathActivity()
+        {
+            if (isWalking)
+            {
+                if (!Body.CollideAgainst(PathArea))
+                {
+                    if (TimeManager.SecondsSince(timeWalking) >= delay)
+                    {
+                        timeIdle = TimeManager.CurrentTime;
+                        isWalking = false;
+
+                        if (facing == Game1.LEFT)
+                            CurrentState = VariableState.L_Idle;
+                        else
+                            CurrentState = VariableState.R_Idle;
+
+                        Velocity.X = 0;
+                        isWalking = false;
+                    }
+                }
+            }
+            else
+            {
+                if (TimeManager.SecondsSince(timeIdle) >= idleDelay)
+                {
+                    if (facing == Game1.LEFT)
+                    {
+                        Velocity.X = speed;
+                        CurrentState = VariableState.R_Walking;
+                        facing = Game1.RIGHT;
+                    }
+                    else
+                    {
+                        Velocity.X = -speed;
+                        CurrentState = VariableState.L_Walking;
+                        facing = Game1.LEFT;
+                    }
+                    timeWalking = TimeManager.CurrentTime;
+                    isWalking = true;
+                }
+            }
+        }
+
+        void HitActivity()
+        {
             mHealthBar.RatioFull = Health / (float)StartingHealth;
-                
+
             if (timeHit != 0)
             {
                 if (TimeManager.SecondsSince(timeHit) >= delay)
                 {
                     if (Health > 0)
                     {
-                        CurrentState = VariableState.L_Idle;
                         canBeHit = true;
                         timeHit = 0;
+
+                        if (facing == Game1.LEFT)
+                        {
+                            Velocity.X = -speed;
+                            CurrentState = VariableState.L_Walking;
+                        }
+                        else
+                        {
+                            Velocity.X = speed;
+                            CurrentState = VariableState.R_Walking;
+                        }
                     }
                     else
                         this.Destroy();
                 }
             }
-
-            DamageTextActivity();
-		}
+        }
 
         private void DamageTextActivity()
         {
@@ -98,6 +174,7 @@ namespace BeefBall.Entities.GameScreen
             
             Health -= damage;
             canBeHit = false;
+            Velocity.X = 0;
 
             timeHit = TimeManager.CurrentTime;
             CurrentState = VariableState.L_Hurt;

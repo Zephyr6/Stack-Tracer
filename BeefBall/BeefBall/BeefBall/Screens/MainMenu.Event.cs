@@ -31,6 +31,7 @@ namespace BeefBall.Screens
             ExitButton.CurrentState = Button.VariableState.Disabled;
             StartGameButton.CurrentState = Button.VariableState.Regular;
             isMousedOver = true;
+            beep.Play();
         }
         void OnStartButtonRollOff (FlatRedBall.Gui.IWindow callingWindow)
         {
@@ -44,6 +45,7 @@ namespace BeefBall.Screens
             ExitButton.CurrentState = Button.VariableState.Disabled;
             StartGameButton.CurrentState = Button.VariableState.Disabled;
             isMousedOver = true;
+            beep.Play();
         }
         void OnAboutButtonRollOff (FlatRedBall.Gui.IWindow callingWindow)
         {
@@ -57,6 +59,7 @@ namespace BeefBall.Screens
             ExitButton.CurrentState = Button.VariableState.Regular;
             StartGameButton.CurrentState = Button.VariableState.Disabled;
             isMousedOver = true;
+            beep.Play();
             Game1.ExitGameSFX.Play();
         }
         void OnExitButtonRollOff (FlatRedBall.Gui.IWindow callingWindow)

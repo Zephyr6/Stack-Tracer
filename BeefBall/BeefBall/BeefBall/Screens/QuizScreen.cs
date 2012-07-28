@@ -42,6 +42,7 @@ namespace BeefBall.Screens
             Select3RandomQuestions();
             DisplayQuestions();
 
+            Console.WriteLine("X: {0} Y: {1} Z: {2}", SpriteManager.Camera.X, SpriteManager.Camera.Y, SpriteManager.Camera.Z);
         }
 
         void CustomActivity(bool firstTimeCalled)

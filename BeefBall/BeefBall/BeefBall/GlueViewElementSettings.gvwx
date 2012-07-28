@@ -16,11 +16,11 @@
     </ElementCameraSave>
     <ElementCameraSave>
       <CameraSave>
-        <X>861.11</X>
-        <Y>39.33567</Y>
+        <X>267.936218</X>
+        <Y>-1.518652</Y>
         <Z>40</Z>
         <Orthogonal>true</Orthogonal>
-        <OrthogonalHeight>311.366364</OrthogonalHeight>
+        <OrthogonalHeight>476.7219</OrthogonalHeight>
         <OrthogonalWidth>-1</OrthogonalWidth>
         <NearClipPlane>1</NearClipPlane>
         <FarClipPlane>1000</FarClipPlane>
@@ -306,7 +306,7 @@
         <Y>0</Y>
         <Z>40</Z>
         <Orthogonal>true</Orthogonal>
-        <OrthogonalHeight>480</OrthogonalHeight>
+        <OrthogonalHeight>600</OrthogonalHeight>
         <OrthogonalWidth>-1</OrthogonalWidth>
         <NearClipPlane>1</NearClipPlane>
         <FarClipPlane>1000</FarClipPlane>

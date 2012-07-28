@@ -47,6 +47,8 @@ namespace BeefBall.Screens
             mGamePad = InputManager.Xbox360GamePads[0];
 
             canMove = true;
+
+            FlatRedBallServices.Game.IsMouseVisible = true;
 		}
 
 		void CustomActivity(bool firstTimeCalled)
@@ -86,20 +88,25 @@ namespace BeefBall.Screens
 
             if (mGamePad.ButtonPushed(Xbox360GamePad.Button.A) || mGamePad.ButtonPushed(Xbox360GamePad.Button.Start))
             {
-                if (currentButton == MainMenuButtons.Start)
+                if (!isMousedOver)
                 {
-                    this.MoveToScreen(typeof(GameScreen).FullName);
-                    Game1.StartGameSFX.Play();
+                    if (currentButton == MainMenuButtons.Start)
+                    {
+                        this.MoveToScreen(typeof(GameScreen).FullName);
+                        Game1.StartGameSFX.Play();
+                    }
+                    else if (currentButton == MainMenuButtons.About)
+                    {
+                        this.MoveToScreen(typeof(About).FullName);
+                        Game1.AboutGameSFX.Play();
+                    }
+                    else if (currentButton == MainMenuButtons.Exit)
+                    {
+                        FlatRedBallServices.Game.Exit();
+                    }
                 }
-                else if (currentButton == MainMenuButtons.About)
-                {
-                    this.MoveToScreen(typeof(About).FullName);
-                    Game1.AboutGameSFX.Play();
-                }
-                else if (currentButton == MainMenuButtons.Exit)
-                {
-                    FlatRedBallServices.Game.Exit();
-                }
+                else
+                    isMousedOver = false;
 
             }
 		}
@@ -108,6 +115,7 @@ namespace BeefBall.Screens
         {
             if (mGamePad.LeftStick.Position.Y > 0)
             {
+                beep.Play();
                 if (currentButton == MainMenuButtons.Start)
                     currentButton = MainMenuButtons.Start;
                 else if (currentButton == MainMenuButtons.About)
@@ -117,6 +125,7 @@ namespace BeefBall.Screens
             }
             else if (mGamePad.LeftStick.Position.Y < 0)
             {
+                beep.Play();
                 if (currentButton == MainMenuButtons.Start)
                     currentButton = MainMenuButtons.About;
                 else if (currentButton == MainMenuButtons.About)

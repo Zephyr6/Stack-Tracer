@@ -112,6 +112,26 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Entities\AButton.cs" />
+    <Compile Include="Entities\AButton.Event.cs">
+      <DependentUpon>AButton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\AButton.Generated.cs">
+      <DependentUpon>AButton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\AButton.Generated.Event.cs">
+      <DependentUpon>AButton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\BButton.cs" />
+    <Compile Include="Entities\BButton.Event.cs">
+      <DependentUpon>BButton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\BButton.Generated.cs">
+      <DependentUpon>BButton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\BButton.Generated.Event.cs">
+      <DependentUpon>BButton.cs</DependentUpon>
+    </Compile>
     <Compile Include="Entities\Button.cs" />
     <Compile Include="Entities\Button.Event.cs">
       <DependentUpon>Button.cs</DependentUpon>
@@ -150,6 +170,26 @@
     <Compile Include="Entities\ToQuiz.cs" />
     <Compile Include="Entities\ToQuiz.Generated.cs">
       <DependentUpon>ToQuiz.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\XButton.cs" />
+    <Compile Include="Entities\XButton.Event.cs">
+      <DependentUpon>XButton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\XButton.Generated.cs">
+      <DependentUpon>XButton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\XButton.Generated.Event.cs">
+      <DependentUpon>XButton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\YButton.cs" />
+    <Compile Include="Entities\YButton.Event.cs">
+      <DependentUpon>YButton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\YButton.Generated.cs">
+      <DependentUpon>YButton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\YButton.Generated.Event.cs">
+      <DependentUpon>YButton.cs</DependentUpon>
     </Compile>
     <Compile Include="GlobalContent.Generated.cs" />
     <Compile Include="Performance\IPoolable.Generated.cs" />

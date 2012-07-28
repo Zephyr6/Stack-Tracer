@@ -69,7 +69,7 @@ namespace BeefBall.Entities
             stringBuilder.Append(Environment.NewLine);
 
 
-            line = String.Format("A: {0}", answerList[0]); 
+            line = String.Format("X)   {0}", answerList[0]); 
             stringBuilder.Append(line);
             stringBuilder.Append(Environment.NewLine);
             stringBuilder.Append(Environment.NewLine);
@@ -77,7 +77,7 @@ namespace BeefBall.Entities
             stringBuilder.Append(Environment.NewLine);
             stringBuilder.Append(Environment.NewLine);
 
-            line = String.Format("B: {0}", answerList[1]);
+            line = String.Format("Y)   {0}", answerList[1]);
             stringBuilder.Append(line);
             stringBuilder.Append(Environment.NewLine);
             stringBuilder.Append(Environment.NewLine);
@@ -85,7 +85,7 @@ namespace BeefBall.Entities
             stringBuilder.Append(Environment.NewLine);
             stringBuilder.Append(Environment.NewLine);
 
-            line = String.Format("C: {0}", answerList[2]);
+            line = String.Format("B)   {0}", answerList[2]);
             stringBuilder.Append(line);
             stringBuilder.Append(Environment.NewLine);
             stringBuilder.Append(Environment.NewLine);
@@ -93,7 +93,7 @@ namespace BeefBall.Entities
             stringBuilder.Append(Environment.NewLine);
             stringBuilder.Append(Environment.NewLine);
             
-            line = String.Format("D: {0}", answerList[3]);
+            line = String.Format("A)   {0}", answerList[3]);
             stringBuilder.Append(line);
             stringBuilder.Append(Environment.NewLine);
             stringBuilder.Append(Environment.NewLine);

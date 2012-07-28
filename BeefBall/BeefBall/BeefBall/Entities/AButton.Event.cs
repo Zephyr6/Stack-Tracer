@@ -6,16 +6,14 @@ using System.Collections.Specialized;
 using BeefBall.Entities;
 using BeefBall.Entities.GameScreen;
 using BeefBall.Screens;
-namespace BeefBall.Screens
+namespace BeefBall.Entities
 {
-	public partial class QuizScreen
+	public partial class AButton
 	{
-		void OnNextQuestionClickTunnel (FlatRedBall.Gui.IWindow callingWindow)
-		{
-			if (this.NextQuestionClick != null)
-			{
-				NextQuestionClick(callingWindow);
-			}
-		}
+		        void OnClick (FlatRedBall.Gui.IWindow callingWindow)
+        {
+            
+        }
+
 	}
 }

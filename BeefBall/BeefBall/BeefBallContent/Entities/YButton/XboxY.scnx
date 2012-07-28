@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SpriteEditorScene xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Sprite>
+    <Name>xbox-button-y1</Name>
+    <Texture>xbox-button-y.png</Texture>
+    <ConstantPixelSize>0</ConstantPixelSize>
+  </Sprite>
+  <Camera>
+    <X>0</X>
+    <Y>0</Y>
+    <Z>-40</Z>
+    <Orthogonal>false</Orthogonal>
+    <OrthogonalHeight>600</OrthogonalHeight>
+    <OrthogonalWidth>-1</OrthogonalWidth>
+    <NearClipPlane>1</NearClipPlane>
+    <FarClipPlane>1000</FarClipPlane>
+  </Camera>
+  <PixelSize>0</PixelSize>
+  <AssetsRelativeToSceneFile>true</AssetsRelativeToSceneFile>
+  <CoordinateSystem>LeftHanded</CoordinateSystem>
+</SpriteEditorScene>

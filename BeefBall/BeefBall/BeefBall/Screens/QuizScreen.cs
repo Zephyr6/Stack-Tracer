@@ -32,10 +32,16 @@ namespace BeefBall.Screens
         private int correctAnswers = 0;
         private List<Question> questions = new List<Question>();
         private Question[] threeQuestions = new Question[3];
-        //Text questionText;
         Text questionText = TextManager.AddText("");
+        Text answerXText = TextManager.AddText("");
+        Text answerYText = TextManager.AddText("");
+        Text answerBText = TextManager.AddText("");
+        Text answerAText = TextManager.AddText("");
+
+        //TextArial ta = new TextArial();
         void CustomInitialize()
         {
+            InitializeCustomEvents();
             FlatRedBallServices.IsWindowsCursorVisible = true;
             NextQuestion.Visible = false;
             ReadInCSV();
@@ -51,7 +57,11 @@ namespace BeefBall.Screens
 
         void CustomDestroy()
         {
-            TextManager.RemoveText(questionText);   
+            TextManager.RemoveText(questionText);
+            TextManager.RemoveText(answerAText);
+            TextManager.RemoveText(answerBText);
+            TextManager.RemoveText(answerXText);
+            TextManager.RemoveText(answerYText);  
 
         }
 
@@ -59,6 +69,25 @@ namespace BeefBall.Screens
         {
 
 
+        }
+
+        public void InitializeCustomEvents() 
+        {
+            XButtoninst.Click += onXBoxXButtonClick;
+            XButtoninst.RollOn += OnXboxXButtonRollOn;
+            XButtoninst.RollOff += OnXBoxXButtonRollOff;
+            
+            YButtonInst.Click += onXBoxYButtonClick;
+            YButtonInst.RollOn += OnXboxYButtonRollOn;
+            YButtonInst.RollOff += OnXBoxYButtonRollOff;
+            
+            AButtonInst.RollOn += OnXboxAButtonRollOn;
+            AButtonInst.Click += OnXBoxAButtonClick;
+            AButtonInst.RollOff += OnXBoxAButtonRollOff;
+            
+            BButtonInst.Click += OnXBoxBButtonClick;
+            BButtonInst.RollOn += OnXboxBButtonRollOn;
+            BButtonInst.RollOff += OnXBoxBButtonRollOff;
         }
 
         public void ReadInCSV()
@@ -118,10 +147,37 @@ namespace BeefBall.Screens
 
         public void DisplayQuestions()
         {
-            questionText.DisplayText = threeQuestions[questionIndex].ToString();
-            questionText.Scale = 4.5f;
-            questionText.X = -50;
-            questionText.Y = 20;
+            questionText.DisplayText = threeQuestions[questionIndex].QuestionText;
+            questionText.Scale = 8f;
+            questionText.Spacing = 8;
+            questionText.X = -150;
+            questionText.Y = 100;
+
+            answerXText.DisplayText = string.Format("X)   {0}", threeQuestions[questionIndex].answerList[0]);
+            answerXText.Scale = 6f;
+            answerXText.Spacing = 6;
+            answerXText.X = -130;
+            answerXText.Y = 60;
+
+            answerYText.DisplayText = string.Format("Y)   {0}",threeQuestions[questionIndex].answerList[1]);
+            answerYText.Scale = 6f;
+            answerYText.Spacing = 6;
+            answerYText.X = -130;
+            answerYText.Y = 20;
+
+            answerBText.DisplayText = string.Format("B)   {0}",threeQuestions[questionIndex].answerList[2]);
+            answerBText.Scale = 6f;
+            answerBText.Spacing = 6;
+            answerBText.X = -130;
+            answerBText.Y = -20;
+
+            answerAText.DisplayText = string.Format("A)   {0}",threeQuestions[questionIndex].answerList[3]);
+            answerAText.Scale = 6f;
+            answerAText.Spacing = 6;
+            answerAText.X = -130;
+            answerAText.Y = -60;
+
+
         }
 
         public void DisplayCorrectAnswer()

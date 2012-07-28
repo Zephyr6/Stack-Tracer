@@ -48,6 +48,22 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Entities\AButton\xbox-button-a.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>xbox-button-a</Name>
+    </None>
+    <None Include="Entities\AButton\XBoxA.scnx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>XBoxA</Name>
+    </None>
+    <None Include="Entities\BButton\xbox-button-b.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>xbox-button-b</Name>
+    </None>
+    <None Include="Entities\BButton\XBoxB.scnx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>XBoxB</Name>
+    </None>
     <None Include="Entities\Button\AnimationChainListFile.achx">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <Name>AnimationChainListFile</Name>
@@ -139,6 +155,22 @@
     <None Include="Entities\ToQuiz\SceneFile.scnx">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <Name>SceneFile</Name>
+    </None>
+    <None Include="Entities\XButton\xbox-button-x.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>xbox-button-x</Name>
+    </None>
+    <None Include="Entities\XButton\XboxX.scnx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>XboxX</Name>
+    </None>
+    <None Include="Entities\YButton\xbox-button-y.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>xbox-button-y</Name>
+    </None>
+    <None Include="Entities\YButton\XboxY.scnx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>XboxY</Name>
     </None>
     <None Include="innerex32x32.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

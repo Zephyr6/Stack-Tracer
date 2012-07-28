@@ -132,6 +132,14 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <Name>SceneFile</Name>
     </None>
+    <None Include="Entities\ToQuiz\comp.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>comp</Name>
+    </None>
+    <None Include="Entities\ToQuiz\SceneFile.scnx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>SceneFile</Name>
+    </None>
     <None Include="innerex32x32.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <Name>innerex32x32</Name>

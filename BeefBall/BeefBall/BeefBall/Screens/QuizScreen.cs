@@ -118,16 +118,10 @@ namespace BeefBall.Screens
 
         public void DisplayQuestions()
         {
-            foreach (Question q in threeQuestions)
-            {
-                //Console.WriteLine(q);
-            }
-            TextManager.RemoveText(questionText);
-            questionText = TextManager.AddText(threeQuestions[questionIndex].ToString());
+            questionText.DisplayText = threeQuestions[questionIndex].ToString();
             questionText.Scale = 4.5f;
             questionText.X = -50;
             questionText.Y = 20;
-
         }
 
         public void DisplayCorrectAnswer()

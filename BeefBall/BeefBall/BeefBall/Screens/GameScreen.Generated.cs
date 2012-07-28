@@ -365,36 +365,37 @@ namespace BeefBall.Screens
 			}
 			if (CapacitorPlatformInstance2.Parent == null)
 			{
-				CapacitorPlatformInstance2.Z = 0.1f;
+				CapacitorPlatformInstance2.Z = 0f;
 			}
 			else
 			{
-				CapacitorPlatformInstance2.RelativeZ = 0.1f;
+				CapacitorPlatformInstance2.RelativeZ = 0f;
 			}
 			if (ResistorStampInstance.Parent == null)
 			{
-				ResistorStampInstance.X = 90f;
+				ResistorStampInstance.X = 0f;
 			}
 			else
 			{
-				ResistorStampInstance.RelativeX = 90f;
+				ResistorStampInstance.RelativeX = 0f;
 			}
 			if (ResistorStampInstance.Parent == null)
 			{
-				ResistorStampInstance.Y = -130f;
+				ResistorStampInstance.Y = -30f;
 			}
 			else
 			{
-				ResistorStampInstance.RelativeY = -130f;
+				ResistorStampInstance.RelativeY = -30f;
 			}
 			if (ResistorStampInstance.Parent == null)
 			{
-				ResistorStampInstance.Z = 0f;
+				ResistorStampInstance.Z = -1f;
 			}
 			else
 			{
-				ResistorStampInstance.RelativeZ = 0f;
+				ResistorStampInstance.RelativeZ = -1f;
 			}
+			ResistorStampInstance.followAmount = 0.4f;
 			if (ResistorStampInstance2.Parent == null)
 			{
 				ResistorStampInstance2.X = 300f;
@@ -405,20 +406,21 @@ namespace BeefBall.Screens
 			}
 			if (ResistorStampInstance2.Parent == null)
 			{
-				ResistorStampInstance2.Y = -150f;
+				ResistorStampInstance2.Y = -20f;
 			}
 			else
 			{
-				ResistorStampInstance2.RelativeY = -150f;
+				ResistorStampInstance2.RelativeY = -20f;
 			}
 			if (ResistorStampInstance2.Parent == null)
 			{
-				ResistorStampInstance2.Z = 0.1f;
+				ResistorStampInstance2.Z = -1f;
 			}
 			else
 			{
-				ResistorStampInstance2.RelativeZ = 0.1f;
+				ResistorStampInstance2.RelativeZ = -1f;
 			}
+			ResistorStampInstance2.followAmount = 0.4f;
 			if (CapacitorPlatformInstance3.Parent == null)
 			{
 				CapacitorPlatformInstance3.X = 465f;
@@ -624,37 +626,38 @@ namespace BeefBall.Screens
 			}
 			if (CapacitorPlatformInstance2.Parent == null)
 			{
-				CapacitorPlatformInstance2.Z = 0.1f;
+				CapacitorPlatformInstance2.Z = 0f;
 			}
 			else
 			{
-				CapacitorPlatformInstance2.RelativeZ = 0.1f;
+				CapacitorPlatformInstance2.RelativeZ = 0f;
 			}
 			ResistorStampInstance.AddToManagers(mLayer);
 			if (ResistorStampInstance.Parent == null)
 			{
-				ResistorStampInstance.X = 90f;
+				ResistorStampInstance.X = 0f;
 			}
 			else
 			{
-				ResistorStampInstance.RelativeX = 90f;
+				ResistorStampInstance.RelativeX = 0f;
 			}
 			if (ResistorStampInstance.Parent == null)
 			{
-				ResistorStampInstance.Y = -130f;
+				ResistorStampInstance.Y = -30f;
 			}
 			else
 			{
-				ResistorStampInstance.RelativeY = -130f;
+				ResistorStampInstance.RelativeY = -30f;
 			}
 			if (ResistorStampInstance.Parent == null)
 			{
-				ResistorStampInstance.Z = 0f;
+				ResistorStampInstance.Z = -1f;
 			}
 			else
 			{
-				ResistorStampInstance.RelativeZ = 0f;
+				ResistorStampInstance.RelativeZ = -1f;
 			}
+			ResistorStampInstance.followAmount = 0.4f;
 			ResistorStampInstance2.AddToManagers(mLayer);
 			if (ResistorStampInstance2.Parent == null)
 			{
@@ -666,20 +669,21 @@ namespace BeefBall.Screens
 			}
 			if (ResistorStampInstance2.Parent == null)
 			{
-				ResistorStampInstance2.Y = -150f;
+				ResistorStampInstance2.Y = -20f;
 			}
 			else
 			{
-				ResistorStampInstance2.RelativeY = -150f;
+				ResistorStampInstance2.RelativeY = -20f;
 			}
 			if (ResistorStampInstance2.Parent == null)
 			{
-				ResistorStampInstance2.Z = 0.1f;
+				ResistorStampInstance2.Z = -1f;
 			}
 			else
 			{
-				ResistorStampInstance2.RelativeZ = 0.1f;
+				ResistorStampInstance2.RelativeZ = -1f;
 			}
+			ResistorStampInstance2.followAmount = 0.4f;
 			CapacitorPlatformInstance3.AddToManagers(mLayer);
 			if (CapacitorPlatformInstance3.Parent == null)
 			{

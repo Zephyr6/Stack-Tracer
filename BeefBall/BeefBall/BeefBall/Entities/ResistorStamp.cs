@@ -25,16 +25,18 @@ namespace BeefBall.Entities
 {
 	public partial class ResistorStamp
 	{
+        float posX;
+
 		private void CustomInitialize()
 		{
-
+            posX = X;
 
 		}
 
 		private void CustomActivity()
 		{
 
-
+            X = posX + SpriteManager.Camera.X * followAmount;
 		}
 
 		private void CustomDestroy()

@@ -32,6 +32,10 @@ namespace BeefBall.Entities
             answerList.Add(WrongAnswer3);
             int count = answerList.Count();
 
+            Console.WriteLine("Q: ");
+            foreach (string s in answerList)
+                Console.WriteLine(s);
+
             while (count > 1) 
             {
                 count--;
@@ -41,6 +45,10 @@ namespace BeefBall.Entities
                 answerList[count] = value;
                 GetCorrectAnswerIndex();
             }
+
+            Console.WriteLine("A: ");
+            foreach (string s in answerList)
+                Console.WriteLine(s);
                         
         }
 

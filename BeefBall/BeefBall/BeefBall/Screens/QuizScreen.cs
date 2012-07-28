@@ -53,7 +53,7 @@ namespace BeefBall.Screens
 
         void CustomDestroy()
         {
-
+            TextManager.RemoveText(questionText);   
 
         }
 
@@ -134,7 +134,7 @@ namespace BeefBall.Screens
 
         public void DisplayCorrectAnswer()
         {
-
+            
         }
 
         public Boolean IsRightAnswer()

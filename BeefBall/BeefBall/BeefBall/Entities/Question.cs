@@ -14,6 +14,7 @@ namespace BeefBall.Entities
         public string WrongAnswer3 { get; set; }
         public int answerIndex { get; private set; }
         public List<string> answerList = new List<string>();
+        public static Random rdm = new Random();
         
         public Question() 
         {
@@ -29,7 +30,6 @@ namespace BeefBall.Entities
             answerList.Add(WrongAnswer1);
             answerList.Add(WrongAnswer2);
             answerList.Add(WrongAnswer3);
-            Random rdm = new Random();
             int count = answerList.Count();
 
             while (count > 1) 

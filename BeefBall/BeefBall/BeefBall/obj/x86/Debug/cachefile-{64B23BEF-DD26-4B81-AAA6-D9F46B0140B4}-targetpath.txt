@@ -2,10 +2,10 @@ Content\Entities\Player\hit.xnb
 Content\Entities\Player\jump.xnb
 Content\Entities\Player\swing.xnb
 Content\Entities\Player\swing2.xnb
+Content\Screens\MainMenu\beep.xnb
 Content\AboutSound.xnb
 Content\ExitSound.xnb
 Content\StartSound.xnb
-Content\Screens\MainMenu\beep.xnb
 Content\Entities\Button\AnimationChainListFile.achx
 Content\Entities\Button\button_click.png
 Content\Entities\Button\button_hover.png

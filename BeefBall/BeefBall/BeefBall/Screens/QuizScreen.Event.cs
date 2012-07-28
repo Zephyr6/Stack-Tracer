@@ -27,12 +27,6 @@ namespace BeefBall.Screens
                 if (threeQuestions[questionIndex].answerIndex == 0)
                 {
                     numCorrect++;
-                    
-                    //AButton.DisplayText = "Correct";
-                    //this.AButton.CurrentState = Button.VariableState.Pressed;
-                    //this.BButton.CurrentState = Button.VariableState.Disabled;
-                    //this.CButton.CurrentState = Button.VariableState.Disabled;
-                    //this.DButton.CurrentState = Button.VariableState.Disabled;
                 }
                 else
                 {
@@ -129,6 +123,11 @@ namespace BeefBall.Screens
                 DisplayQuestions();
             }
                 NextQuestionNotVisible();
+
+            if(questionIndex > 2)
+            {
+                this.MoveToScreen(typeof(GameScreen).FullName);
+            }
         }
         void OnDButtonClick (FlatRedBall.Gui.IWindow callingWindow)
         {
@@ -162,6 +161,10 @@ namespace BeefBall.Screens
             this.CButton.Visible = false;
             this.DButton.Visible = false;
             this.NextQuestion.Visible = true;
+            if (questionIndex > 2)
+            {
+                this.NextQuestion.DisplayText = "Done";
+            }
         }
 
         void NextQuestionNotVisible() 
@@ -184,7 +187,6 @@ namespace BeefBall.Screens
             this.BButton.Visible = false;
             this.CButton.Visible = false;
             this.DButton.Visible = false;
-            this.NextQuestion.Visible = false;  
         }
 
         void UpdateNumCorrect() 

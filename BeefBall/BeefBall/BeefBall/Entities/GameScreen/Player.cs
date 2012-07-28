@@ -31,7 +31,7 @@ namespace BeefBall.Entities.GameScreen
 	{
         public List<Enemy> enemies { get; set; }
 
-        Xbox360GamePad mGamePad;
+        public Xbox360GamePad mGamePad;
         double timePunched;
         Text debugText;
 

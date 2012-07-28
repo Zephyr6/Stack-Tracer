@@ -118,13 +118,19 @@ namespace BeefBall.Screens
 
             if (PlayerInstance.Body.CollideAgainst(ToQuizInstance.Body))
             {
-                SpriteManager.Camera.Detach();
-                SpriteManager.Camera.X = 0;
-                SpriteManager.Camera.Y = 0;
-                SpriteManager.Camera.Z = 40;
+                ToQuizInstance.InstructionTextVisible = true;
 
-                this.MoveToScreen(typeof(QuizScreen).FullName);
+                if (PlayerInstance.mGamePad.ButtonPushed(Xbox360GamePad.Button.X))
+                {
+                    SpriteManager.Camera.Detach();
+                    SpriteManager.Camera.X = 0;
+                    SpriteManager.Camera.Y = 0;
+                    SpriteManager.Camera.Z = 40;
+
+                    this.MoveToScreen(typeof(QuizScreen).FullName);
+                }
             }
+            else ToQuizInstance.InstructionTextVisible = false;
         }
 
 		void CustomDestroy()

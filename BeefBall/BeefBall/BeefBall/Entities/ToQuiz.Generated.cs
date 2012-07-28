@@ -57,6 +57,7 @@ namespace BeefBall.Entities
 		static object mLockObject = new object();
 		static bool mHasRegisteredUnload = false;
 		static bool IsStaticContentLoaded = false;
+		private static Scene SceneFile;
 		
 		private FlatRedBall.Math.Geometry.Circle mBody;
 		public FlatRedBall.Math.Geometry.Circle Body
@@ -64,6 +65,19 @@ namespace BeefBall.Entities
 			get
 			{
 				return mBody;
+			}
+		}
+		private FlatRedBall.Scene EntireScene;
+		private FlatRedBall.Graphics.Text InstructionText;
+		public bool InstructionTextVisible
+		{
+			get
+			{
+				return InstructionText.Visible;
+			}
+			set
+			{
+				InstructionText.Visible = value;
 			}
 		}
 		public int Index { get; set; }
@@ -89,7 +103,13 @@ namespace BeefBall.Entities
 		{
 			// Generated Initialize
 			LoadStaticContent(ContentManagerName);
+			EntireScene = SceneFile.Clone();
+			for (int i = 0; i < EntireScene.Texts.Count; i++)
+			{
+				EntireScene.Texts[i].AdjustPositionForPixelPerfectDrawing = true;
+			}
 			mBody = new FlatRedBall.Math.Geometry.Circle();
+			InstructionText = new FlatRedBall.Graphics.Text();
 			
 			PostInitialize();
 			if (addToManagers)
@@ -114,6 +134,7 @@ namespace BeefBall.Entities
 			// Generated Activity
 			
 			CustomActivity();
+			EntireScene.ManageAll();
 			
 			// After Custom Activity
 		}
@@ -126,6 +147,14 @@ namespace BeefBall.Entities
 			if (Body != null)
 			{
 				Body.Detach(); ShapeManager.Remove(Body);
+			}
+			if (EntireScene != null)
+			{
+				EntireScene.RemoveFromManagers(ContentManagerName != "Global");
+			}
+			if (InstructionText != null)
+			{
+				InstructionText.Detach(); TextManager.RemoveText(InstructionText);
 			}
 
 
@@ -142,13 +171,14 @@ namespace BeefBall.Entities
 				mBody.CopyAbsoluteToRelative();
 				mBody.AttachTo(this, false);
 			}
+			Body.Visible = false;
 			if (Body.Parent == null)
 			{
-				Body.X = 0f;
+				Body.X = -1f;
 			}
 			else
 			{
-				Body.RelativeX = 0f;
+				Body.RelativeX = -1f;
 			}
 			if (Body.Parent == null)
 			{
@@ -160,8 +190,35 @@ namespace BeefBall.Entities
 			}
 			Body.Radius = 10f;
 			Body.Color = Color.GreenYellow;
+			EntireScene.CopyAbsoluteToRelative();
+			EntireScene.AttachAllDetachedTo(this, false);
+			if (InstructionText!= null && InstructionText.Parent == null)
+			{
+				InstructionText.CopyAbsoluteToRelative();
+				InstructionText.AttachTo(this, false);
+			}
+			InstructionText.DisplayText = "Press X to use.";
+			if (InstructionText.Parent == null)
+			{
+				InstructionText.X = -40f;
+			}
+			else
+			{
+				InstructionText.RelativeX = -40f;
+			}
+			if (InstructionText.Parent == null)
+			{
+				InstructionText.Y = 20f;
+			}
+			else
+			{
+				InstructionText.RelativeY = 20f;
+			}
+			InstructionText.Scale = 8f;
+			InstructionText.Spacing = 7f;
 			X = 0f;
 			Y = 0f;
+			InstructionTextVisible = false;
 			FlatRedBall.Math.Geometry.ShapeManager.SuppressAddingOnVisibilityTrue = oldShapeManagerSuppressAdd;
 		}
 		public virtual void AddToManagersBottomUp (Layer layerToAddTo)
@@ -182,13 +239,14 @@ namespace BeefBall.Entities
 			RotationY = 0;
 			RotationZ = 0;
 			ShapeManager.AddToLayer(mBody, layerToAddTo);
+			mBody.Visible = false;
 			if (mBody.Parent == null)
 			{
-				mBody.X = 0f;
+				mBody.X = -1f;
 			}
 			else
 			{
-				mBody.RelativeX = 0f;
+				mBody.RelativeX = -1f;
 			}
 			if (mBody.Parent == null)
 			{
@@ -200,6 +258,28 @@ namespace BeefBall.Entities
 			}
 			mBody.Radius = 10f;
 			mBody.Color = Color.GreenYellow;
+			EntireScene.AddToManagers(layerToAddTo);
+			TextManager.AddToLayer(InstructionText, layerToAddTo);
+			InstructionText.SetPixelPerfectScale(layerToAddTo);
+			InstructionText.DisplayText = "Press X to use.";
+			if (InstructionText.Parent == null)
+			{
+				InstructionText.X = -40f;
+			}
+			else
+			{
+				InstructionText.RelativeX = -40f;
+			}
+			if (InstructionText.Parent == null)
+			{
+				InstructionText.Y = 20f;
+			}
+			else
+			{
+				InstructionText.RelativeY = 20f;
+			}
+			InstructionText.Scale = 8f;
+			InstructionText.Spacing = 7f;
 			X = oldX;
 			Y = oldY;
 			Z = oldZ;
@@ -211,6 +291,8 @@ namespace BeefBall.Entities
 		{
 			this.ForceUpdateDependenciesDeep();
 			SpriteManager.ConvertToManuallyUpdated(this);
+			EntireScene.ConvertToManuallyUpdated();
+			TextManager.ConvertToManuallyUpdated(InstructionText);
 		}
 		public static void LoadStaticContent (string contentManagerName)
 		{
@@ -237,6 +319,11 @@ namespace BeefBall.Entities
 					}
 				}
 				bool registerUnload = false;
+				if (!FlatRedBallServices.IsLoaded<Scene>(@"content/entities/toquiz/scenefile.scnx", ContentManagerName))
+				{
+					registerUnload = true;
+				}
+				SceneFile = FlatRedBallServices.Load<Scene>(@"content/entities/toquiz/scenefile.scnx", ContentManagerName);
 				if (registerUnload && ContentManagerName != FlatRedBallServices.GlobalContentManager)
 				{
 					lock (mLockObject)
@@ -255,9 +342,28 @@ namespace BeefBall.Entities
 		{
 			IsStaticContentLoaded = false;
 			mHasRegisteredUnload = false;
+			if (SceneFile != null)
+			{
+				SceneFile.RemoveFromManagers(ContentManagerName != "Global");
+				SceneFile= null;
+			}
+		}
+		public static object GetStaticMember (string memberName)
+		{
+			switch(memberName)
+			{
+				case  "SceneFile":
+					return SceneFile;
+			}
+			return null;
 		}
 		object GetMember (string memberName)
 		{
+			switch(memberName)
+			{
+				case  "SceneFile":
+					return SceneFile;
+			}
 			return null;
 		}
 		protected bool mIsPaused;
@@ -270,6 +376,8 @@ namespace BeefBall.Entities
 		{
 			InstructionManager.IgnorePausingFor(this);
 			InstructionManager.IgnorePausingFor(Body);
+			InstructionManager.IgnorePausingFor(EntireScene);
+			InstructionManager.IgnorePausingFor(InstructionText);
 		}
 
     }

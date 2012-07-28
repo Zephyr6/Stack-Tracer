@@ -41,8 +41,6 @@ namespace BeefBall.Screens
             ReadInCSV();
             Select3RandomQuestions();
             DisplayQuestions();
-
-            Console.WriteLine("X: {0} Y: {1} Z: {2}", SpriteManager.Camera.X, SpriteManager.Camera.Y, SpriteManager.Camera.Z);
         }
 
         void CustomActivity(bool firstTimeCalled)
@@ -122,7 +120,7 @@ namespace BeefBall.Screens
         {
             foreach (Question q in threeQuestions)
             {
-                Console.WriteLine(q);
+                //Console.WriteLine(q);
             }
             TextManager.RemoveText(questionText);
             questionText = TextManager.AddText(threeQuestions[questionIndex].ToString());

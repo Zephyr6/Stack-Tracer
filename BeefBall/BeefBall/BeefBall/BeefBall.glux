@@ -184,7 +184,7 @@
           <CustomProperty>
             <Type>float</Type>
             <Member>Z</Member>
-            <ValueAsFloat>0.1</ValueAsFloat>
+            <ValueAsFloat>0</ValueAsFloat>
           </CustomProperty>
           <SourceType>Entity</SourceType>
           <SourceClassType>Entities\CapacitorPlatform</SourceClassType>
@@ -196,17 +196,22 @@
           <CustomProperty>
             <Type>float</Type>
             <Member>X</Member>
-            <ValueAsFloat>90</ValueAsFloat>
+            <ValueAsFloat>0</ValueAsFloat>
           </CustomProperty>
           <CustomProperty>
             <Type>float</Type>
             <Member>Y</Member>
-            <ValueAsFloat>-130</ValueAsFloat>
+            <ValueAsFloat>-30</ValueAsFloat>
           </CustomProperty>
           <CustomProperty>
             <Type>float</Type>
             <Member>Z</Member>
-            <ValueAsFloat>0</ValueAsFloat>
+            <ValueAsFloat>-1</ValueAsFloat>
+          </CustomProperty>
+          <CustomProperty>
+            <Type>float</Type>
+            <Member>followAmount</Member>
+            <ValueAsFloat>0.4</ValueAsFloat>
           </CustomProperty>
           <SourceType>Entity</SourceType>
           <SourceClassType>Entities\ResistorStamp</SourceClassType>
@@ -223,12 +228,17 @@
           <CustomProperty>
             <Type>float</Type>
             <Member>Y</Member>
-            <ValueAsFloat>-150</ValueAsFloat>
+            <ValueAsFloat>-20</ValueAsFloat>
           </CustomProperty>
           <CustomProperty>
             <Type>float</Type>
             <Member>Z</Member>
-            <ValueAsFloat>0.1</ValueAsFloat>
+            <ValueAsFloat>-1</ValueAsFloat>
+          </CustomProperty>
+          <CustomProperty>
+            <Type>float</Type>
+            <Member>followAmount</Member>
+            <ValueAsFloat>0.4</ValueAsFloat>
           </CustomProperty>
           <SourceType>Entity</SourceType>
           <SourceClassType>Entities\ResistorStamp</SourceClassType>
@@ -2261,6 +2271,17 @@
             </PropertySave>
           </Properties>
           <Name>Z</Name>
+          <Type>float</Type>
+          <DefaultValue xsi:type="xsd:float">0</DefaultValue>
+        </CustomVariable>
+        <CustomVariable>
+          <Properties>
+            <PropertySave>
+              <Name>Type</Name>
+              <ValueAsString>float</ValueAsString>
+            </PropertySave>
+          </Properties>
+          <Name>followAmount</Name>
           <Type>float</Type>
           <DefaultValue xsi:type="xsd:float">0</DefaultValue>
         </CustomVariable>

@@ -61,6 +61,7 @@ namespace BeefBall.Entities
 		private static Texture2D Resistor256;
 		
 		private FlatRedBall.Scene ResistorScene;
+		public float followAmount = 0f;
 		public int Index { get; set; }
 		public bool Used { get; set; }
 		protected Layer LayerProvidedByContainer = null;
@@ -142,6 +143,7 @@ namespace BeefBall.Entities
 			X = 0f;
 			Y = 0f;
 			Z = 0f;
+			followAmount = 0f;
 			FlatRedBall.Math.Geometry.ShapeManager.SuppressAddingOnVisibilityTrue = oldShapeManagerSuppressAdd;
 		}
 		public virtual void AddToManagersBottomUp (Layer layerToAddTo)
